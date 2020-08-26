@@ -285,6 +285,7 @@ Clear Select Styles
     width: 288px;
     display: block;
     text-shadow: 1px 1px 2px white, 1px 1px 3px #333333;
+    transition: all .1s ease-in-out;
   }
 
 .bond2input {display: flex; justify-content: center;margin-top: -20px;    }
@@ -449,8 +450,10 @@ M O D A L B O X
   background: linear-gradient(145deg, rgb(39, 64, 100), rgb(46, 76, 119));
 }
 .modal h2 {
-      text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
-      -webkit-text-stroke: 1px #0d254240;
+      text-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 4px 4px 6px rgb(0 0 0 / 79%), 4px 4px 7px #3560a200;
+      -webkit-text-stroke: 1px #90acce85;
+      /*text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
+      -webkit-text-stroke: 1px #0d254240; */
       color: rgb(226 230 233);
       font-variant: small-caps;
   }
@@ -466,15 +469,17 @@ M O D A L B O X
 }
 
 h1, .modal-title {
+    text-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 4px 4px 6px rgb(0 0 0 / 79%), 4px 4px 7px #3560a200;
+    -webkit-text-stroke: 1px #90acce85;
     margin: 0;
     line-height: 1.42857143;
     font-size: 33px;
     margin: -11px 0 -18px 0;
-    text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
-    -webkit-text-stroke: 1px #0d254240;
+    /* text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
+    -webkit-text-stroke: 1px #0d254240; */
     font-size: 48px;
     color: rgb(226 230 233);
-    font-weight: bold;
+/*    font-weight: bold; */
     font-variant: small-caps;
 }
 
@@ -491,7 +496,7 @@ h1, .modal-title {
   margin-right: 3px !important;
 }
 
-.modal-body span {color: #232222;
+.modal-body sp7an {color: #232222;
     text-shadow: 1px 1px 2px #0000008f;
     font-size: 17px;}
 
