@@ -1,0 +1,54 @@
+https://neumorphism.io/#2b476f
+Neumorphism.io
+
+.neumorp{
+  border-radius: 39px;
+  background: linear-gradient(145deg, #274064, #2e4c77);
+  box-shadow:  14px 14px 27px #253d5f,
+               -14px -14px 27px #31517f;
+}
+
+.superTitle{
+    text-shadow: -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(105 164 255 / 90%), 2px 2px 4px rgb(0 0 0 / 70%), 2px 2px 3px #3560a2;
+    -webkit-text-stroke: 1px #0d254240;
+    -moz-transform: matrix( 2.0087350381294,0,0,2.02764641179351,0,0);
+    -webkit-transform: matrix( 2.0087350381294,0,0,2.02764641179351,0,0);
+    -ms-transform: matrix( 2.0087350381294,0,0,2.02764641179351,0,0);
+    font-size: 48px;
+    font-family: "Montserrat";
+    color: rgb(226 230 233);
+    font-weight: bold;
+    font-variant: small-caps;
+  }
+
+
+.SuperTitles {text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
+  -webkit-text-stroke: 1px #0d254240;
+  -moz-transform: matrix( 2.0087350381294,0,0,2.02764641179351,0,0);
+  -webkit-transform: matrix( 2.0087350381294,0,0,2.02764641179351,0,0);
+  -ms-transform: matrix( 2.0087350381294,0,0,2.02764641179351,0,0);
+  font-size: 48px;
+  font-family: "Montserrat";
+  color: rgb(226 230 233);
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+    List of IDs
+id="yourSYNC"
+
+
+<div id='prog-bar-cont'>
+  <div id="prog-bar">
+    <div id="background"></div>
+  </div>
+</div>
+
+<div class="progress" style="width: 85%; margin-left: 7%;">
+  <div class="progress-bar w-75" style="
+background-image: linear-gradient(-180deg, #0099c7 4%, #2976ad 99%);
+box-shadow: inset 0 3px 6px 1px #1a2e42;
+background: linear-gradient(90deg, #05c1ff, #ff1076)
+">
+  </div>
+</div>
