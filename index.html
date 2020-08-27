@@ -34,7 +34,7 @@
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="..">Home <span class="sr-only">(current)</span></a> <div class="navspacer"> | </div>
             <a class="nav-item nav-link" href="#">FAQ</a><div class="navspacer"> | </div>
-            <a class="nav-item nav-link" href="#">BOND BUILDER</a><span class="navspacer"> | </span>
+            <a class="nav-item nav-link" href="#"  data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BOND BUILDER</a><span class="navspacer"> | </span>
             <a class="nav-item nav-link" href="#">BOND MARKET</a><span class="navspacer"> | </span>
             <a class="nav-item nav-link" href="stats">STATS</a>
           </div>
@@ -152,6 +152,122 @@
  </div>
  <!-- Modal GET SYNCED-->
 
+<div class="container-fluid white-text"><!-- BEGIN DOCUMENT -->
+
+ <!-- https://stackoverflow.com/questions/49645228/bootstrap-4-collapse-other-sections-when-one-is-expanded
+ ░█▀▀█ ░█▀▀▀█ ░█▄─░█ ░█▀▀▄ 　 ░█▀▀█ ░█─░█ ▀█▀ ░█─── ░█▀▀▄ ░█▀▀▀ ░█▀▀█
+ ░█▀▀▄ ░█──░█ ░█░█░█ ░█─░█ 　 ░█▀▀▄ ░█─░█ ░█─ ░█─── ░█─░█ ░█▀▀▀ ░█▄▄▀
+ ░█▄▄█ ░█▄▄▄█ ░█──▀█ ░█▄▄▀ 　 ░█▄▄█ ─▀▄▄▀ ▄█▄ ░█▄▄█ ░█▄▄▀ ░█▄▄▄ ░█─░█
+ -->
+ <section id="bondBuilder" class="collapse">
+ <center><img src="img/bondbuilder.webp" style="padding-top:50px;"> </center>
+
+ <hr>
+
+ <div class="row">
+   <div class="col-lg-2 col-md-0 col-sm-12"></div>
+   <div class="col-lg-4 col-md-6 col-sm-12">
+     <h1 style="font-size:40px">Select Asset Pair</h1>
+         <div class="bond2input">
+           <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#pairChooser"></a>
+           <input class="noclick" id="pair" type="text" value="" placeholder="NONE" required="" >
+         </div>
+   </div>
+   <div class="col-lg-4 col-md-6 col-sm-12">
+     <h1 style="font-size:40px">Asset Amount</h1>
+
+         <div class="bond2input">
+           <a class="neumorphicbutton textinput"></a>
+           <input id="assetAmount" type="number" value="" min="0.000000000000" placeholder="0" required="" style="font-size: 16px;" >
+         </div>
+
+         <center><input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);" style="width:220px"></center>
+
+   </div>
+ </div>
+ <!------------>
+ <hr style="width:25vw;">
+
+ <div class="row">
+   <div class="col-sm-12"></div>
+     <div class="col-md-12 col-sm-12"><h1 style="font-size:60px">SYNC REQUIRED</h1></div>
+ </div>
+
+ <div class="row">
+   <div class="col-lg-2 col-md-0 col-sm-12"></div>
+     <div class="col-lg-4 col-md-6 col-sm-12">
+       <div class="bond2input">
+         <a class="neumorphicbutton textinput"></a>
+         <input id="syncAmount" type="number" value="" placeholder="0 SYNC" required="" style="pointer-events: none;font-size: 16px;" >
+       </div>
+     </div>
+     <div class="col-lg-4 col-md-6 col-sm-12">
+       <div class="bond2input">
+         <a class="neumorphicbutton textinput"></a>
+         <input id="syncValue" type="number" value="" placeholder="$0" required="" style="pointer-events: none;font-size: 16px;" >
+       </div>
+     </div>
+ </div>
+
+ <hr style="width:25vw;">
+
+ <div class="row">
+     <div class="col-lg-2 col-md-0 col-sm-12"></div>
+     <div class="col-lg-4 col-md-6 col-sm-12">
+       <h1 style="font-size:40px">Dividens</h1>
+           <div class="bond2input">
+             <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#divChooser"></a>
+             <input class="noclick" id="divSchedule" type="text" value="" placeholder="NONE" required="" >
+           </div>
+     </div>
+
+     <div class="col-lg-4 col-md-6 col-sm-12">
+       <h1 style="font-size:40px">Years</h1>
+
+           <div class="bond2input">
+             <a class="neumorphicbutton textinput"></a>
+             <input id="cbondDuration" type="number" value="" placeholder="Select Years"  min="1" max="3" step="1" required="" value="1" style="font-size: 16px;" >
+           </div>
+
+           <center><input value=1 type="range" name="rangeInput" min="1" max="3" step="1" onchange="updateLengthInput(this.value);" style="width:220px"></center>
+
+     </div>
+
+     <div class="col-md-12 col-sm-12"><h1 style="font-size:60px">EARNING RATE = 2%</h1></div>
+
+     <div class="col-sm-12">
+        <!--div style="display: flex; justify-content: center;">
+           <a class="neumorphicbutton" id="create_bond"></a>
+         </div-->
+         <div style="display: flex;justify-content: center;">
+           <a class="neumorphicbutton" id="createbond" href="#" data-dismiss="modal" style="transform:scale(1.5)"><span>CREATE BOND</span></a>
+         </div>
+  		</div>
+ </div>
+
+ </section>
+ <!--
+ ░█▀▀█ ░█▀▀▀█ ░█▄─░█ ░█▀▀▄ 　 ░█▀▀█ ░█─░█ ▀█▀ ░█─── ░█▀▀▄ ░█▀▀▀ ░█▀▀█
+ ░█▀▀▄ ░█──░█ ░█░█░█ ░█─░█ 　 ░█▀▀▄ ░█─░█ ░█─ ░█─── ░█─░█ ░█▀▀▀ ░█▄▄▀
+ ░█▄▄█ ░█▄▄▄█ ░█──▀█ ░█▄▄▀ 　 ░█▄▄█ ─▀▄▄▀ ▄█▄ ░█▄▄█ ░█▄▄▀ ░█▄▄▄ ░█─░█
+ -->
+
+<!--
+██████████████████████████████████████████████████
+█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░███░░░░░░░░░░░░░░█
+█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█
+█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░░░▄▀░░███░░▄▀░░░░░░░░░░█
+█░░▄▀░░█████████░░▄▀░░████░░▄▀░░███░░▄▀░░█████████
+█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░░░▄▀░░███░░▄▀░░░░░░░░░░█
+█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█
+█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░▄▀░░░░███░░░░░░░░░░▄▀░░█
+█░░▄▀░░█████████░░▄▀░░██░░▄▀░░█████████████░░▄▀░░█
+█░░▄▀░░█████████░░▄▀░░██░░▄▀░░░░░░█░░░░░░░░░░▄▀░░█
+█░░▄▀░░█████████░░▄▀░░██░░▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█
+█░░░░░░█████████░░░░░░██░░░░░░░░░░█░░░░░░░░░░░░░░█
+██████████████████████████████████████████████████
+-->
+<section>
  <div class="row">
    <div class="col-md-3 col-sm-12" style="padding-top:50px;">
     </div>
@@ -163,8 +279,6 @@
   </div>
 
      <!---------- Distro Start -------------->
-
-     <div class="container-fluid white-text">
  	<div class="row">
  		<div class="col-md-3">
  		</div>
@@ -214,8 +328,24 @@
 
  		<div class="col-md-3">
  		</div>
- 	</div>
+
+</section>
                <!---------- Distro End -------------->
+               <!--
+               ██████████████████████████████████████████████████
+               █░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░███░░░░░░░░░░░░░░█
+               █░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█
+               █░░▄▀░░░░░░░░░░█░░▄▀░░░░░░░░▄▀░░███░░▄▀░░░░░░░░░░█
+               █░░▄▀░░█████████░░▄▀░░████░░▄▀░░███░░▄▀░░█████████
+               █░░▄▀░░░░░░░░░░█░░▄▀░░░░░░░░▄▀░░███░░▄▀░░░░░░░░░░█
+               █░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█
+               █░░▄▀░░░░░░░░░░█░░▄▀░░░░░░▄▀░░░░███░░░░░░░░░░▄▀░░█
+               █░░▄▀░░█████████░░▄▀░░██░░▄▀░░█████████████░░▄▀░░█
+               █░░▄▀░░█████████░░▄▀░░██░░▄▀░░░░░░█░░░░░░░░░░▄▀░░█
+               █░░▄▀░░█████████░░▄▀░░██░░▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█
+               █░░░░░░█████████░░░░░░██░░░░░░░░░░█░░░░░░░░░░░░░░█
+               ██████████████████████████████████████████████████
+               -->
  <hr>
 
  <div class="row">
@@ -229,93 +359,6 @@
  </div>
 
 <hr>
-
-
-<center><img src="img/bondbuilder.webp" style="padding-top:50px;"> </center>
-
-<hr>
-
-<div class="row">
-  <div class="col-lg-2 col-md-0 col-sm-12"></div>
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <h1 style="font-size:40px">Select Asset Pair</h1>
-        <div class="bond2input">
-          <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#pairChooser"></a>
-          <input class="noclick" id="pair" type="text" value="" placeholder="NONE" required="" >
-        </div>
-  </div>
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <h1 style="font-size:40px">Asset Amount</h1>
-
-        <div class="bond2input">
-          <a class="neumorphicbutton textinput"></a>
-          <input id="assetAmount" type="number" value="" placeholder="0" required="" style="font-size: 16px;" >
-        </div>
-
-        <center><input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);" style="width:220px"></center>
-
-  </div>
-</div>
-<!------------>
-<hr style="width:25vw;">
-
-<div class="row">
-  <div class="col-sm-12"></div>
-    <div class="col-md-12 col-sm-12"><h1 style="font-size:60px">SYNC REQUIRED</h1></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2 col-md-0 col-sm-12"></div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="bond2input">
-        <a class="neumorphicbutton textinput"></a>
-        <input id="syncAmount" type="number" value="" placeholder="0 SYNC" required="" style="pointer-events: none;font-size: 16px;" >
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="bond2input">
-        <a class="neumorphicbutton textinput"></a>
-        <input id="syncValue" type="number" value="" placeholder="$0" required="" style="pointer-events: none;font-size: 16px;" >
-      </div>
-    </div>
-</div>
-
-<hr style="width:25vw;">
-
-<div class="row">
-    <div class="col-lg-2 col-md-0 col-sm-12"></div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <h1 style="font-size:40px">Dividens</h1>
-          <div class="bond2input">
-            <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#divChooser"></a>
-            <input class="noclick" id="divSchedule" type="text" value="" placeholder="NONE" required="" >
-          </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <h1 style="font-size:40px">Years</h1>
-
-          <div class="bond2input">
-            <a class="neumorphicbutton textinput"></a>
-            <input id="cbondDuration" type="number" value="" placeholder="Years" required="" value="1" style="font-size: 16px;" >
-          </div>
-
-          <center><input value=1 type="range" name="rangeInput" min="1" max="3" step="1" onchange="updateLengthInput(this.value);" style="width:220px"></center>
-
-    </div>
-
-    <div class="col-md-12 col-sm-12"><h1 style="font-size:60px">EARNING RATE = 2%</h1></div>
-
-    <div class="col-sm-12">
-       <!--div style="display: flex; justify-content: center;">
-          <a class="neumorphicbutton" id="create_bond"></a>
-        </div-->
-        <div style="display: flex;justify-content: center;">
-          <a class="neumorphicbutton" id="createbond" href="#" data-dismiss="modal" style="transform:scale(1.5)"><span>CREATE BOND</span></a>
-        </div>
- 		</div>
-</div>
-
 <div class="row">
 
 
@@ -323,7 +366,80 @@
 
 
     <div style="height:300px;"></div>
-    <footer class="white-text"><center>Created By CRYPTOGENIK</center></footer>
+</div><!-- END DOCUMENT -->
+    <footer>
+        <div class="container pt-5 border-bottom">
+          <div class="row">
+            <div class="col-md-3 col-sm-12 mb-3 text-center">
+              <div class="logo rotateIn" style="width:100%;height:200px;"></div>
+            </div>
+            <div class="col-md-9 col-sm-12">
+
+              <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
+                <h5 class="mb-4 font-weight-bold text-uppercase">Solutions</h5>
+              <ul class="list-group">
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../sales/sales-performance-market-pipeline.html">Sales</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="href="../project-management/project-management.html"">Project Management</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../workforce/workforce-organization-management-hr.html">Workforce</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../e-commerce/e-commerce.html"> E-Commerce</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../finance/finance-accounting-erp.html">Finance</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../business-apps/business-apps.html">Business Apps</a></li>
+              </ul>
+              </div>
+
+              <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
+                <h5 class="mb-4 font-weight-bold text-uppercase">Developers</h5>
+              <ul class="list-group">
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://github.com/naologic">Open Source</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://stackshare.io/naologic">Technology</a></li>
+              </ul>
+              </div>
+
+              <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+                <h5 class="mb-4 font-weight-bold text-uppercase">C.O.F.E.</h5>
+              <ul class="list-group">
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../about-naologic.html"></i>About</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://blog.naologic.com"></i> Blog</a></li>
+              </ul>
+              </div>
+
+              <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+                <h5 class="mb-4 font-weight-bold text-uppercase">Connect</h5>
+              <ul class="list-group">
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                  <a href="https://www.linkedin.com/company/naologic"><i class="fa fa-linkedin mr-1"></i> LinkedIn</a>
+                </li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                  <a href="https://twitter.com/SYNCTOKEN"><i class="fa fa-twitter mr-1"></i> Twitter</a>
+                </li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                  <a href="https://www.reddit.com/r/naologic/"><i class="fa fa-reddit mr-1"></i> Reddit</a>
+                </li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                  <a href="https://github.com/C-O-F-E" target="_blank"><i class="fa fa-github mr-1"></i> Github</a>
+                </li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                  <a href="https://blog.naologic.com" target="_blank"><i class="fa fa-medium mr-1"></i> Medium</a>
+                </li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                  <a href="https://www.facebook.com/naologic/" target="_blank"><i class="fa fa-facebook mr-1"></i> Facebook</a>
+                </li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                  <a href="https://www.youtube.com/channel/UCtHmuf2oQLnksokfz8GIbKA" target="_blank"><i class="fa fa-youtube mr-1"></i> YouTube</a>
+                </li>
+              </ul>
+              </div>
+
+            </div>
+              <div class="col-md-12">
+                <div class="py-4 d-flex justify-content-center align-items-center">
+                  <a class="mr-4" href="../privacy.html">Privacy & terms</a>
+                  <a href="../sitemap.xml">Sitemap</a>
+                </div>
+              </div>
+          </div>
+        </div>
+</footer>
     <script>
     function updateTextInput(val) {
               document.getElementById('assetAmount').value=val;

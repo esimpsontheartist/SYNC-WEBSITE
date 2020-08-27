@@ -427,14 +427,17 @@ Clear Select Styles
   clip-path: inset(0 0 0 0);
 }
 
-.row h1,.row h2,.row h4 {
+.row h1, .row h2, .row h4 {
       color: ghostwhite;
       text-align: center;
 }
-.row h3 {
+.row h3, .row h5, .list-group {
   color: ghostwhite;
   text-align: left;
 }
+
+.list-group-item a {    color: antiquewhite;}
+.list-group-item a:hover {   color: ghostwhite;}
 
 .SuperTitles {text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
   -webkit-text-stroke: 1px #0d254240;
