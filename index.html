@@ -1,258 +1,248 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet">
-    <link href="main.css?v=.011" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet" />
+        <link href="main.css?v=.011" rel="stylesheet" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="flipclock.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="flipclock.css" />
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <title>CBONDS</title>
-  </head>
-  <body>
-    <div id="menu"></div>
+        <title>CBONDS</title>
+    </head>
+    <body>
+        <div id="menu"></div>
 
-      <nav class="navbar navbar-expand-lg navbar-dark">
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="..">Home <span class="sr-only">(current)</span></a> <div class="navspacer"> | </div>
-            <a class="nav-item nav-link" href="#">FAQ</a><div class="navspacer"> | </div>
-            <a class="nav-item nav-link" href="#"  data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BOND BUILDER</a><span class="navspacer"> | </span>
-            <a class="nav-item nav-link" href="#">BOND MARKET</a><span class="navspacer"> | </span>
-            <a class="nav-item nav-link" href="stats">STATS</a>
-          </div>
-        </div>
-      </nav>
-
-
-    <div id="bars"></div>
-
-    <!-- Modal Div Schedule Chooser -->
-    <div class="modal fade" id="divChooser" tabindex="-1" role="dialog" aria-labelledby="divChooser" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Payout Schedule</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </div>
-          <div class="modal-body">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">HOME</a><span class="navspacer"> | </span> <a class="nav-item nav-link" href="#">FAQ</a>
+                    <div class="navspacer">|</div>
+                    <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BOND BUILDER</a><span class="navspacer"> | </span>
+                    <a class="nav-item nav-link" href="#">BOND MARKET</a><span class="navspacer"> | </span>
+                    <a class="nav-item nav-link" href="stats">STATS</a>
+                </div>
+            </div>
+        </nav>
 
-            <!--button type="button" id="quarterlyDivs" class="" data-dismiss="modal" aria-label="Close"-->
-            <div style="display: flex;justify-content: center;">
-              <a class="neumorphicbutton" id="quarterlyDivs" href="#" data-dismiss="modal"><span>Quarterly Divs</span></a>
-            </div>
-            <div style="display: flex;justify-content: center;">
-              <a class="neumorphicbutton" id="maturityDivs" href="#" data-dismiss="modal"><span>Maturity</span></a>
-            </div>
-              <!-- a class="neumorphicbutton" id="quarterlyDivs" data-dismiss="modal" aria-label="Close" style="display: inline-block; width: 100% !important;text-align:center; "><h1>Quarterly Divs</h1></a>
-              <a class="neumorphicbutton" id="maturityDivs" data-dismiss="modal" aria-label="Close" style="display: inline-block; width: 100% !important;text-align:center; "><h1>Maturity</h1></a>
-            <!--/button-->
+        <div id="bars"></div>
 
-          </div>
-          <div class="modal-footer" style="display:block;">
-            <div style="display: flex;justify-content: center;">
-              <a class="neumorphicbutton" id="not_get_sync" href="#" data-dismiss="modal"><span>CLOSE</span></a>
+        <!-- Modal Div Schedule Chooser -->
+        <div class="modal fade" id="divChooser" tabindex="-1" role="dialog" aria-labelledby="divChooser" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="payoutModalLongTitle">Payout Schedule</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div style="display: flex; justify-content: center;">
+                            <a class="neumorphicbutton" id="quarterlyDivs" href="#" data-dismiss="modal"><span>Quarterly Divs</span></a>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <a class="neumorphicbutton" id="maturityDivs" href="#" data-dismiss="modal"><span>Maturity</span></a>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="display: block;">
+                        <div style="display: flex; justify-content: center;">
+                            <a class="neumorphicbutton" href="#" data-dismiss="modal"><span>CLOSE</span></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
- <!-- Modal Pair Chooser-->
- <div class="modal fade" id="pairChooser" tabindex="-1" role="dialog" aria-labelledby="pairChooser" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLongTitle">Choose Basepair</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         <button type="button" id="eth-dos" class="" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true"><img src="img/pairs/DOS.webp" /><br>DOS Network</span>
-         </button>
-         <button type="button" id="eth-xft" class="" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true"><img src="img/pairs/offshift_logo.webp" /><br>Offshift</span>
-         </button>
-         <button type="button" class="eth-par" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true"><img src="img/pairs/Parachute_Logo.webp" /><br>Parachute</span>
-         </button>
-       </div>
-       <div class="modal-footer" style="display:block;">
-         <div style="display: flex;justify-content: center;">
-           <a class="neumorphicbutton" id="not_get_sync" href="#" data-dismiss="modal"><span>CLOSE</span></a>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+        <!-- Modal Pair Chooser-->
+        <div class="modal fade" id="pairChooser" tabindex="-1" role="dialog" aria-labelledby="pairChooser" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="basepairModalLongTitle">Choose Basepair</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" id="eth-dos" class="" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <img alt="Pair" src="img/pairs/DOS.webp" /><br />
+                                DOS Network
+                            </span>
+                        </button>
+                        <button type="button" id="eth-xft" class="" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <img alt="Pair" src="img/pairs/offshift_logo.webp" /><br />
+                                Offshift
+                            </span>
+                        </button>
+                        <button type="button" class="eth-par" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <img alt="Pair" src="img/pairs/Parachute_Logo.webp" /><br />
+                                Parachute
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-footer" style="display: block;">
+                        <div style="display: flex; justify-content: center;">
+                            <a class="neumorphicbutton" href="#" data-dismiss="modal"><span>CLOSE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
- <!-- Modal GET SYNCED-->
- <div class="modal fade" id="GET_SYNCED" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLongTitle">GET SYNC</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
+        <!-- Modal GET SYNCED-->
+        <div class="modal fade" id="GET_SYNCED" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="getsyncModalLongTitle">GET SYNC</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 style="margin: 5px 0 -10px 0; text-align: center;">Step 1: Send Ethereum</h2>
 
+                        <div class="bondinput" style="display: inline-block; padding-left: 8%;">
+                            <input type="text" value="" placeholder="0" required="" style="color: darkgrey;" />
+                        </div>
 
-         <h2 style="margin: 5px 0 -10px 0;text-align: center;">Step 1: Send Ethereum</h2>
+                        <img alt="arrow" src="img/arrow.webp" style="margin: -25px 0 -55px; z-index: 5; position: relative; left: 40%;" />
+                        <div style="padding-top: 23px; display: flex; justify-content: center; transform: scale(1.3);">
+                            <a class="neumorphicbutton" id="enterLobby" href="#" data-dismiss="modal"><span>ENTER LOBBY</span></a>
+                        </div>
+                        <!--a class="neumorphicbutton" id="enter_lobby" style="display: inline-block; width: 100% !important;    height: 148px;    padding-left: 8%;    transform: scale(0.8);"></a-->
 
-         <div class="bondinput" style="display: inline-block; padding-left: 8%;">
-                  <input type="text" value="" placeholder="0" required="" style:"color:darkgrey;">
-          </div>
+                        <h2 style="border-top: 1px solid #e9ecef; padding: 23px 0 0 0; text-align: center;">Step 2: Collect SYNC next Day</h2>
+                        <div style="padding-top: 0px; display: flex; justify-content: center; transform: scale(1.3);">
+                            <a class="neumorphicbutton" id="collectSync" href="#" data-dismiss="modal"><span>COLLECT SYNC</span></a>
+                        </div>
 
-          <center><img src="img/arrow.webp" style="margin: -25px 0 -55px;z-index: 5;position: relative;" /></center>
-          <div style="padding-top: 23px;display: flex;justify-content: center;transform: scale(1.3);">
-             <a class="neumorphicbutton" id="enterLobby" href="#" data-dismiss="modal"><span>ENTER LOBBY</span></a>
-          </div>
-          <!--a class="neumorphicbutton" id="enter_lobby" style="display: inline-block; width: 100% !important;    height: 148px;    padding-left: 8%;    transform: scale(0.8);"></a-->
+                        <!--a class="neumorphicbutton" id="collect_sync" style="display: inline-block; width: 100% !important;    height: 148px;    padding-left: 8%;    transform: scale(0.8);"></a-->
+                    </div>
+                    <div class="modal-footer" style="display: block;">
+                        <div style="display: flex; justify-content: center;">
+                            <a class="neumorphicbutton" href="#" data-dismiss="modal"><span>CLOSE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal GET SYNCED-->
 
-          <h2 style="border-top: 1px solid #e9ecef;    padding: 23px 0 0 0;    text-align: center;">Step 2: Collect SYNC next Day</h2>
-          <div style="padding-top: 0px;display: flex;justify-content: center;transform: scale(1.3);">
-             <a class="neumorphicbutton" id="collectSync" href="#" data-dismiss="modal"><span>COLLECT SYNC</span></a>
-          </div>
+        <div class="container-fluid white-text" id="dapps">
+            <!-- BEGIN DOCUMENT -->
 
-          <!--a class="neumorphicbutton" id="collect_sync" style="display: inline-block; width: 100% !important;    height: 148px;    padding-left: 8%;    transform: scale(0.8);"></a-->
-
-
-       </div>
-       <div class="modal-footer" style="display:block;">
-         <div style="display: flex;justify-content: center;">
-           <a class="neumorphicbutton" id="not_get_sync" href="#" data-dismiss="modal"><span>CLOSE</span></a>
-         </div>
-
-       </div>
-     </div>
-   </div>
- </div>
- <!-- Modal GET SYNCED-->
-
-<div class="container-fluid white-text"><!-- BEGIN DOCUMENT -->
-
- <!-- https://stackoverflow.com/questions/49645228/bootstrap-4-collapse-other-sections-when-one-is-expanded
+            <!--
  ░█▀▀█ ░█▀▀▀█ ░█▄─░█ ░█▀▀▄ 　 ░█▀▀█ ░█─░█ ▀█▀ ░█─── ░█▀▀▄ ░█▀▀▀ ░█▀▀█
  ░█▀▀▄ ░█──░█ ░█░█░█ ░█─░█ 　 ░█▀▀▄ ░█─░█ ░█─ ░█─── ░█─░█ ░█▀▀▀ ░█▄▄▀
  ░█▄▄█ ░█▄▄▄█ ░█──▀█ ░█▄▄▀ 　 ░█▄▄█ ─▀▄▄▀ ▄█▄ ░█▄▄█ ░█▄▄▀ ░█▄▄▄ ░█─░█
  -->
- <section id="bondBuilder" class="collapse">
- <center><img src="img/bondbuilder.webp" style="padding-top:50px;"> </center>
+            <section id="bondBuilder" class="collapse" data-parent="#dapps">
+                <img alt="CBond Builder" src="img/bondbuilder.webp" style="padding-top: 50px; margin: auto; display: block;" />
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 col-md-0 col-sm-12"></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h1 style="font-size: 40px;">Select Asset Pair</h1>
+                        <div class="bond2input">
+                            <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#pairChooser"></a>
+                            <input class="noclick" id="pair" type="text" value="" placeholder="NONE" required="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h1 style="font-size: 40px;">Asset Amount</h1>
 
- <hr>
+                        <div class="bond2input">
+                            <a class="neumorphicbutton textinput"></a>
+                            <input id="assetAmount" type="number" value="" min="0.000000000000" placeholder="0" required="" style="font-size: 16px;" />
+                        </div>
 
- <div class="row">
-   <div class="col-lg-2 col-md-0 col-sm-12"></div>
-   <div class="col-lg-4 col-md-6 col-sm-12">
-     <h1 style="font-size:40px">Select Asset Pair</h1>
-         <div class="bond2input">
-           <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#pairChooser"></a>
-           <input class="noclick" id="pair" type="text" value="" placeholder="NONE" required="" >
-         </div>
-   </div>
-   <div class="col-lg-4 col-md-6 col-sm-12">
-     <h1 style="font-size:40px">Asset Amount</h1>
+                        <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);" style="width: 220px; margin: auto;" />
+                    </div>
+                </div>
 
-         <div class="bond2input">
-           <a class="neumorphicbutton textinput"></a>
-           <input id="assetAmount" type="number" value="" min="0.000000000000" placeholder="0" required="" style="font-size: 16px;" >
-         </div>
+                <hr style="width: 25vw;" />
 
-         <center><input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);" style="width:220px"></center>
+                <div class="row">
+                    <div class="col-sm-12"></div>
+                    <div class="col-md-12 col-sm-12"><h1 style="font-size: 60px;">SYNC REQUIRED</h1></div>
+                </div>
 
-   </div>
- </div>
- <!------------>
- <hr style="width:25vw;">
+                <div class="row">
+                    <div class="col-lg-2 col-md-0 col-sm-12"></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="bond2input">
+                            <a class="neumorphicbutton textinput"></a>
+                            <input id="syncAmount" type="number" value="" placeholder="0 SYNC" required="" style="pointer-events: none; font-size: 16px;" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="bond2input">
+                            <a class="neumorphicbutton textinput"></a>
+                            <input id="syncValue" type="number" value="" placeholder="$0" required="" style="pointer-events: none; font-size: 16px;" />
+                        </div>
+                    </div>
+                </div>
 
- <div class="row">
-   <div class="col-sm-12"></div>
-     <div class="col-md-12 col-sm-12"><h1 style="font-size:60px">SYNC REQUIRED</h1></div>
- </div>
+                <hr style="width: 25vw;" />
 
- <div class="row">
-   <div class="col-lg-2 col-md-0 col-sm-12"></div>
-     <div class="col-lg-4 col-md-6 col-sm-12">
-       <div class="bond2input">
-         <a class="neumorphicbutton textinput"></a>
-         <input id="syncAmount" type="number" value="" placeholder="0 SYNC" required="" style="pointer-events: none;font-size: 16px;" >
-       </div>
-     </div>
-     <div class="col-lg-4 col-md-6 col-sm-12">
-       <div class="bond2input">
-         <a class="neumorphicbutton textinput"></a>
-         <input id="syncValue" type="number" value="" placeholder="$0" required="" style="pointer-events: none;font-size: 16px;" >
-       </div>
-     </div>
- </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-0 col-sm-12"></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h1 style="font-size: 40px;">Dividens</h1>
+                        <div class="bond2input">
+                            <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#divChooser"></a>
+                            <input class="noclick" id="divSchedule" type="text" value="" placeholder="NONE" required="" />
+                        </div>
+                    </div>
 
- <hr style="width:25vw;">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h1 style="font-size: 40px;">Years</h1>
 
- <div class="row">
-     <div class="col-lg-2 col-md-0 col-sm-12"></div>
-     <div class="col-lg-4 col-md-6 col-sm-12">
-       <h1 style="font-size:40px">Dividens</h1>
-           <div class="bond2input">
-             <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#divChooser"></a>
-             <input class="noclick" id="divSchedule" type="text" value="" placeholder="NONE" required="" >
-           </div>
-     </div>
+                        <div class="bond2input">
+                            <a class="neumorphicbutton textinput"></a>
+                            <input id="cbondDuration" type="number" placeholder="Select Years" min="1" max="3" step="1" required="" value="1" style="font-size: 16px;" />
+                        </div>
 
-     <div class="col-lg-4 col-md-6 col-sm-12">
-       <h1 style="font-size:40px">Years</h1>
+                        <input value="1" type="range" name="rangeInput" min="1" max="3" step="1" onchange="updateLengthInput(this.value);" style="width: 220px; margin: auto;" />
+                    </div>
 
-           <div class="bond2input">
-             <a class="neumorphicbutton textinput"></a>
-             <input id="cbondDuration" type="number" value="" placeholder="Select Years"  min="1" max="3" step="1" required="" value="1" style="font-size: 16px;" >
-           </div>
+                    <div class="col-md-12 col-sm-12"><h1 style="font-size: 60px;">EARNING RATE = 2%</h1></div>
 
-           <center><input value=1 type="range" name="rangeInput" min="1" max="3" step="1" onchange="updateLengthInput(this.value);" style="width:220px"></center>
-
-     </div>
-
-     <div class="col-md-12 col-sm-12"><h1 style="font-size:60px">EARNING RATE = 2%</h1></div>
-
-     <div class="col-sm-12">
-        <!--div style="display: flex; justify-content: center;">
-           <a class="neumorphicbutton" id="create_bond"></a>
-         </div-->
-         <div style="display: flex;justify-content: center;">
-           <a class="neumorphicbutton" id="createbond" href="#" data-dismiss="modal" style="transform:scale(1.5)"><span>CREATE BOND</span></a>
-         </div>
-  		</div>
- </div>
-
- </section>
- <!--
+                    <div class="col-sm-12">
+                        <div style="display: flex; justify-content: center;">
+                            <a class="neumorphicbutton" id="createbond" href="#" data-dismiss="modal" style="transform: scale(1.5);"><span>CREATE BOND</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--
  ░█▀▀█ ░█▀▀▀█ ░█▄─░█ ░█▀▀▄ 　 ░█▀▀█ ░█─░█ ▀█▀ ░█─── ░█▀▀▄ ░█▀▀▀ ░█▀▀█
  ░█▀▀▄ ░█──░█ ░█░█░█ ░█─░█ 　 ░█▀▀▄ ░█─░█ ░█─ ░█─── ░█─░█ ░█▀▀▀ ░█▄▄▀
  ░█▄▄█ ░█▄▄▄█ ░█──▀█ ░█▄▄▀ 　 ░█▄▄█ ─▀▄▄▀ ▄█▄ ░█▄▄█ ░█▄▄▀ ░█▄▄▄ ░█─░█
  -->
 
-<!--
+            <!--
 ██████████████████████████████████████████████████
 █░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░███░░░░░░░░░░░░░░█
 █░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█
@@ -267,71 +257,63 @@
 █░░░░░░█████████░░░░░░██░░░░░░░░░░█░░░░░░░░░░░░░░█
 ██████████████████████████████████████████████████
 -->
-<section>
- <div class="row">
-   <div class="col-md-3 col-sm-12" style="padding-top:50px;">
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <img src="img/title3-cbonds.webp?v2" style="width:100%">
-    </div>
-    <div class="col-md-3 col-sm-12" style="padding-top:50px;">
-     </div>
-  </div>
 
-     <!---------- Distro Start -------------->
- 	<div class="row">
- 		<div class="col-md-3">
- 		</div>
- 		<div class="col-md-2">
- 			<!-- img alt="Bootstrap Image Preview" width="100%" src="https://d340lr3764rrcr.cloudfront.net/Images/EOS_spinning_logo.gif" class="rounded" / -->
-       <div class="logo rotateIn" style="width:100%;height:300px;margin-top:60px;"></div>
-       <h3 id="yourSYNC" style="padding-bottom: 15px;">Your SYNC:</h3>
-       <div style='display: flex; justify-content: center;margin-top: -20px;'>
-          <a class="neumorphicbutton" id="not_get_sync" href="#"  data-toggle="modal" data-target="#GET_SYNCED"><span>GET SYNC</span></a>
-        </div>
- 		</div>
- 		<div class="col-md-4">
- 			<div class="row">
- 				<div class="col-md-8">
- 					<h3>
- 						SYNC Fair Release Schedule
- 					</h3>
- 				</div>
- 				<div class="col-md-4">
- 					<h5 style="margin-top: 28px;" id="currentPeriod">DAY 275 of 350</h5>
- 				</div>
- 			</div>
+            <section id="frs" class="collapse" data-parent="#dapps">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-sm-offset-12 col-md-offset-2 col-lg-offset-3">
+                        <img alt="Crypto bonds" src="img/title3-cbonds.webp?v2" style="width: 100%;" />
+                    </div>
+                </div>
 
-      <div class="progress">
-        <div class="progress-bar" style="width:70%">&nbsp;</div>
-      </div>
+                <!-- Distro Start -->
+                <div class="row">
+                    <div class="col-md-2 col-sm-offset-12 col-md-offset-2 col-lg-offset-3">
+                        <div class="logo rotateIn" style="width: 100%; height: 300px; margin-top: 60px;"></div>
+                        <h3 id="yourSYNC" style="padding-bottom: 15px;">Your SYNC:</h3>
+                        <div style="display: flex; justify-content: center; margin-top: -20px;">
+                            <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#GET_SYNCED"><span>GET SYNC</span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h3>
+                                    SYNC Fair Release Schedule
+                                </h3>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 style="margin-top: 28px;" id="currentPeriod">DAY 275 of 350</h5>
+                            </div>
+                        </div>
 
- 			<div class="row neumorph">
- 				<div class="col-md-6 ">
-           <h4 style="">TODAY'S DISTRIBUTION</h4>
- 					<h1 id="syncTotal">♻5,000,000</h1>
-           <h4>SYNC TOKENS</h4>
- 				</div>
- 				<div class="col-md-6 ">
- 					<center><h4 style="">9/1/2020</h4><h1 id="ethRecieved">Ξ 1,234</h1>
-             <h4>ETH Recieved</h4></center>
- 				</div>
- 			</div>
-      <div class="row ">
- 			<h4 style="margin: 25px auto;">CURRENT DISTRIBUTION ENDS IN</h4>
-       <span style="margin: auto;"><div class="clock" id="clock1"></div></span>
- 			<dl><dt>
- 					*Depending on the Ethereum network traffic, figures may be delayed.
- 				</dt></dl>
-      </div>
- 		</div>
+                        <div class="row progress">
+                            <div class="progress-bar" style="width: 70%;">&nbsp;</div>
+                        </div>
 
- 		<div class="col-md-3">
- 		</div>
-
-</section>
-               <!---------- Distro End -------------->
-               <!--
+                        <div class="row neumorph">
+                            <div class="col-md-6">
+                                <h4>TODAY'S DISTRIBUTION</h4>
+                                <h1 id="syncTotal">♻5,000,000</h1>
+                                <h4>SYNC TOKENS</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 style="">9/1/2020</h4>
+                                <h1 id="ethRecieved">Ξ 1,234</h1>
+                                <h4>ETH Recieved</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h4 style="margin: 25px auto;">CURRENT DISTRIBUTION ENDS IN</h4>
+                            <div style="margin: auto;"><div class="clock" id="clock1"></div></div>
+                            <h5>*Depending on the Ethereum network traffic, figures may be delayed.</h5>
+                          </DIV>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Distro End -->
+            <!--
                ██████████████████████████████████████████████████
                █░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░███░░░░░░░░░░░░░░█
                █░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█
@@ -346,154 +328,154 @@
                █░░░░░░█████████░░░░░░██░░░░░░░░░░█░░░░░░░░░░░░░░█
                ██████████████████████████████████████████████████
                -->
- <hr>
+            <hr />
 
- <div class="row">
-   <div class="col-md-3"></div>
-   <div class="col-md-2"><h3>EQUAL OPPORTUNITY</h3><p>SYNC Tokens have no pre-determined price; rather price is set by market demand. This reduces unfair advantages to large purchasers.</p></div>
-   <div class="col-md-2"><h3>BROAD DISTRIBUTION</h3><p>A 1 year distribution is to ensure everyone gets a chance to on board without diluting the early investors</p></div>
-   <div class="col-md-2"><h3>TRUSTLESS</h3><p>Fully powered by an unstoppable, immutable Ethereum Smart Contract.</p></div>
-   <div class="col-md-3"></div>
- </div>
-
- </div>
-
-<hr>
-<div class="row">
-
-
-</div>
-
-
-    <div style="height:300px;"></div>
-</div><!-- END DOCUMENT -->
-    <footer>
-        <div class="container pt-5 border-bottom">
-          <div class="row">
-            <div class="col-md-3 col-sm-12 mb-3 text-center">
-              <div class="logo rotateIn" style="width:100%;height:200px;"></div>
-            </div>
-            <div class="col-md-9 col-sm-12">
-
-              <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
-                <h5 class="mb-4 font-weight-bold text-uppercase">Solutions</h5>
-              <ul class="list-group">
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../sales/sales-performance-market-pipeline.html">Sales</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="href="../project-management/project-management.html"">Project Management</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../workforce/workforce-organization-management-hr.html">Workforce</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../e-commerce/e-commerce.html"> E-Commerce</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../finance/finance-accounting-erp.html">Finance</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../business-apps/business-apps.html">Business Apps</a></li>
-              </ul>
-              </div>
-
-              <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
-                <h5 class="mb-4 font-weight-bold text-uppercase">Developers</h5>
-              <ul class="list-group">
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://github.com/naologic">Open Source</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://stackshare.io/naologic">Technology</a></li>
-              </ul>
-              </div>
-
-              <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
-                <h5 class="mb-4 font-weight-bold text-uppercase">C.O.F.E.</h5>
-              <ul class="list-group">
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../about-naologic.html"></i>About</a></li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://blog.naologic.com"></i> Blog</a></li>
-              </ul>
-              </div>
-
-              <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
-                <h5 class="mb-4 font-weight-bold text-uppercase">Connect</h5>
-              <ul class="list-group">
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                  <a href="https://www.linkedin.com/company/naologic"><i class="fa fa-linkedin mr-1"></i> LinkedIn</a>
-                </li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                  <a href="https://twitter.com/SYNCTOKEN"><i class="fa fa-twitter mr-1"></i> Twitter</a>
-                </li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                  <a href="https://www.reddit.com/r/naologic/"><i class="fa fa-reddit mr-1"></i> Reddit</a>
-                </li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                  <a href="https://github.com/C-O-F-E" target="_blank"><i class="fa fa-github mr-1"></i> Github</a>
-                </li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                  <a href="https://blog.naologic.com" target="_blank"><i class="fa fa-medium mr-1"></i> Medium</a>
-                </li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                  <a href="https://www.facebook.com/naologic/" target="_blank"><i class="fa fa-facebook mr-1"></i> Facebook</a>
-                </li>
-                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                  <a href="https://www.youtube.com/channel/UCtHmuf2oQLnksokfz8GIbKA" target="_blank"><i class="fa fa-youtube mr-1"></i> YouTube</a>
-                </li>
-              </ul>
-              </div>
-
-            </div>
-              <div class="col-md-12">
-                <div class="py-4 d-flex justify-content-center align-items-center">
-                  <a class="mr-4" href="../privacy.html">Privacy & terms</a>
-                  <a href="../sitemap.xml">Sitemap</a>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <h3>EQUAL OPPORTUNITY</h3>
+                    <p>SYNC Tokens have no pre-determined price; rather price is set by market demand. This reduces unfair advantages to large purchasers.</p>
                 </div>
-              </div>
-          </div>
+                <div class="col-md-2">
+                    <h3>BROAD DISTRIBUTION</h3>
+                    <p>A 1 year distribution is to ensure everyone gets a chance to on board without diluting the early investors</p>
+                </div>
+                <div class="col-md-2">
+                    <h3>TRUSTLESS</h3>
+                    <p>Fully powered by an unstoppable, immutable Ethereum Smart Contract.</p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
         </div>
-</footer>
-    <script>
-    function updateTextInput(val) {
-              document.getElementById('assetAmount').value=val;
+
+        <hr />
+
+        <!--  /div><!--lost div? -->
+
+        <!-- END DOCUMENT -->
+        <footer style="padding-top: 300px;">
+            <div class="container pt-5 border-bottom">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 mb-3 text-center">
+                        <div class="logo rotateIn" style="width: 100%; height: 200px;"></div>
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
+                            <h5 class="mb-4 font-weight-bold text-uppercase">Solutions</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../sales/sales-performance-market-pipeline.html">Sales</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../project-management/project-management.html">Project Management</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../workforce/workforce-organization-management-hr.html">Workforce</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../e-commerce/e-commerce.html"> E-Commerce</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../finance/finance-accounting-erp.html">Finance</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../business-apps/business-apps.html">Business Apps</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
+                            <h5 class="mb-4 font-weight-bold text-uppercase">Developers</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://github.com/naologic">Open Source</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://stackshare.io/naologic">Technology</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+                            <h5 class="mb-4 font-weight-bold text-uppercase">C.O.F.E.</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="../about-naologic.html">About</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://blog.naologic.com">Blog</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+                            <h5 class="mb-4 font-weight-bold text-uppercase">Connect</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                                    <a href="https://www.linkedin.com/company/naologic"><i class="fa fa-linkedin mr-1"></i> LinkedIn</a>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                                    <a href="https://twitter.com/SYNCTOKEN"><i class="fa fa-twitter mr-1"></i> Twitter</a>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                                    <a href="https://www.reddit.com/r/naologic/"><i class="fa fa-reddit mr-1"></i> Reddit</a>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                                    <a href="https://github.com/C-O-F-E" target="_blank"><i class="fa fa-github mr-1"></i> Github</a>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                                    <a href="https://blog.naologic.com" target="_blank"><i class="fa fa-medium mr-1"></i> Medium</a>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                                    <a href="https://www.facebook.com/naologic/" target="_blank"><i class="fa fa-facebook mr-1"></i> Facebook</a>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                                    <a href="https://www.youtube.com/channel/UCtHmuf2oQLnksokfz8GIbKA" target="_blank"><i class="fa fa-youtube mr-1"></i> YouTube</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="py-4 d-flex justify-content-center align-items-center">
+                            <a class="mr-4" href="../privacy.html">Privacy & terms</a>
+                            <a href="../sitemap.xml">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function updateTextInput(val) {
+                document.getElementById("assetAmount").value = val;
             }
-    function updateLengthInput(val) {
-              document.getElementById('cbondDuration').value=val;
+            function updateLengthInput(val) {
+                document.getElementById("cbondDuration").value = val;
             }
 
-      $(document).ready(function() {
-        $().ready(function() {
+            $(document).ready(function () {
+                $().ready(function () {
+                    $("#quarterlyDivs").click(function (event) {
+                        $("#divSchedule").val("Quarterly");
+                    });
+                    $("#maturityDivs").click(function (event) {
+                        $("#divSchedule").val("Maturity");
+                    });
 
-          $("#quarterlyDivs").click(function(event) {
-                    $('#divSchedule').val("Quarterly");
+                    $("#eth-dos").click(function (event) {
+                        $("#pair").val("ETH-DOS");
+                    });
+                    $("#eth-xft").click(function (event) {
+                        $("#pair").val("ETH-XFT");
+                    });
+                    $("#eth-par").click(function (event) {
+                        $("#pair").val("ETH-PAR");
+                    });
+
+                    //* Target Date Must be Like Below
+                    //var date = new Date("June 15, 2016 12:45:00");
+
+                    // Just for running purpose
+                    //=======================================
+                    var start = new Date();
+                    start.setDate(start.getDate());
+                    start.setHours(-5, 0, 0, 0);
+                    //======================================
+                    var now = new Date();
+
+                    var diff = (now.getTime() - start.getTime()) / 1000;
+
+                    var clock = $("#clock1").FlipClock(diff, {
+                        clockFace: "HourlyCounter",
+                        countdown: true,
+                        showSeconds: true,
+                    });
                 });
-          $("#maturityDivs").click(function(event) {
-                    $('#divSchedule').val("Maturity");
-                });
+            });
+        </script>
 
-          $("#eth-dos").click(function(event) {
-                    $('#pair').val("ETH-DOS");
-                });
-          $("#eth-xft").click(function(event) {
-                    $('#pair').val("ETH-XFT");
-                });
-          $("#eth-par").click(function(event) {
-                    $('#pair').val("ETH-PAR");
-                });
-
-          //* Target Date Must be Like Below
-    //var date = new Date("June 15, 2016 12:45:00");
-
-    // Just for running purpose
-    //=======================================
-    var start = new Date();
-    start.setDate(start.getDate());
-    start.setHours(-5,0,0,0)
-    //======================================
-    var now   = new Date();
-
-    var diff = (now.getTime() - start.getTime()) / 1000;
-
-    var clock = $('#clock1').FlipClock(diff, {
-      clockFace: 'HourlyCounter',
-      countdown: true,
-      showSeconds: true
-    });
-}
-)});
-
-</script>
-     <!---------- Scripts -------------->
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-     <script src="flipclock-min.js"></script>
-   </body>
- </html>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="flipclock-min.js"></script>
+    </body>
+</html>
