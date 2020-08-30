@@ -12,33 +12,36 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" /-->
         <link rel="stylesheet" href="flipclock.css" />
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
 
         <title>CBONDS</title>
     </head>
     <body>
         <div id="menu"></div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">HOME</a><span class="navspacer"> | </span> <a class="nav-item nav-link" href="#">FAQ</a>
-                    <div class="navspacer">|</div>
-                    <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BOND BUILDER</a><span class="navspacer"> | </span>
-                    <a class="nav-item nav-link" href="#">BOND MARKET</a><span class="navspacer"> | </span>
-                    <a class="nav-item nav-link" href="stats">STATS</a>
-                </div>
-            </div>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
+          <a class="navbar-brand text-light" href="#" >MENU</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto text-light">
+                                  <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">HOME</a><!-- div class="navspacer">|</div -->
+                                  <a class="nav-item nav-link" href="#">FAQ</a><!-- div class="navspacer">|</div -->
+                                  <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BOND BUILDER</a><!-- div class="navspacer">|</div -->
+                                  <a class="nav-item nav-link" href="#">BOND MARKET</a><!-- div class="navspacer">|</div -->
+                                  <a class="nav-item nav-link" href="stats">STATS</a>
+            </ul>
+
+          </div>
         </nav>
 
         <div id="bars"></div>
@@ -260,14 +263,14 @@
 
             <section id="frs" class="collapse" data-parent="#dapps">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 col-sm-offset-12 col-md-offset-2 col-lg-offset-3">
+                    <div class="col-md-6 col-sm-12 offset-md-1 offset-lg-2">
                         <img alt="Crypto bonds" src="img/title3-cbonds.webp?v2" style="width: 100%;" />
                     </div>
                 </div>
 
                 <!-- Distro Start -->
                 <div class="row">
-                    <div class="col-md-2 col-sm-offset-12 col-md-offset-2 col-lg-offset-3">
+                    <div class="col-md-3 offset-md-1 offset-lg-2">
                         <div class="logo rotateIn" style="width: 100%; height: 300px; margin-top: 60px;"></div>
                         <h3 id="yourSYNC" style="padding-bottom: 15px;">Your SYNC:</h3>
                         <div style="display: flex; justify-content: center; margin-top: -20px;">
@@ -346,7 +349,7 @@
                 </div>
                 <div class="col-md-3"></div>
             </div>
-        </div>
+
 
         <hr />
 
@@ -424,6 +427,8 @@
                 </div>
             </div>
         </footer>
+</div>        <!-- Container Fluid -->
+
         <script>
             function updateTextInput(val) {
                 document.getElementById("assetAmount").value = val;
