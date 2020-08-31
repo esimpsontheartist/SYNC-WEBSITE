@@ -22,9 +22,9 @@ body {background:transparent !important;
 
 .title{
   font-weight: 800;
-      font-size: 73px;
-      text-shadow: 4px 4px 7px #0094c700, -2px -2px 5px #799bb347, 2px -2px 5px #2174bb99, -2px 2px 4px #022746c4, 2px 2px 4px #0000005c, -3px -3px 9px rgb(58 97 154 / 90%), 0px 0px 6px rgb(141 186 255), 5px 5px 10px rgb(0 0 0), 4px 4px 11px #3560a240;
-      -webkit-text-stroke: 3px #00172991;
+      font-size: 100px;
+      text-shadow: 0 0 3px black, 2px -2px 5px #2174bb99, -2px 2px 4px #022746c4, -3px -3px 9px rgb(58 97 154 / 90%), 0px 0px 6px rgb(141 186 255), 5px 5px 10px rgb(0 0 0);
+      -webkit-text-stroke: 1px rgba(0,123,255,.5);
 }
 
 .flip-clock-wrapper {
