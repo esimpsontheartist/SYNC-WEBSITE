@@ -845,10 +845,14 @@ nav {
       box-shadow: 5px 5px 5pc black;
       border: 1px solid #c0c0c04d;
       background-image: linear-gradient(315deg, #2b5184c4 0%, #0d2341 50%, #2b5184ba 100%);
-      padding: 10px;}
+      padding: 10px;
+    }
+
 
 /* Small devices (landscape phones, 576px and up) */
 .title {    font-size: 50px;}
+.neumorph {margin: 20px 30px; }
+
 
 @media (min-width: 576px) {
 
