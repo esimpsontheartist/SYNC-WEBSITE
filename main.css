@@ -488,10 +488,9 @@ Clear Select Styles
 
 #eth-sync,#eth-dos,#eth-dai,#eth-link,#eth-akro,#eth-ren {    background: transparent; color: white;    border: none; }
 
-footer {
+footer {background: linear-gradient(0deg, rgba(18,28,43,1) 0%, rgba(46,73,114,0) 100%);}
 
 
-}
 /*
 ####################################################
 M O D A L B O X
