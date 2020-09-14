@@ -1041,7 +1041,7 @@ Custom media queries
       border-radius: 14px;
       text-align: left;
       box-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 4px 4px 6px rgb(0 0 0 / 79%), 4px 4px 7px #3560a200 !important;
-      background-image: linear-gradient(315deg, #2b518430 0%, #0d2341 50%, #2b518459 100%);
+      background-image: linear-gradient(315deg, #2b5184 0%, #0d2341 50%, #2b5184 100%);
 }
 
 .direction-l .flag {
