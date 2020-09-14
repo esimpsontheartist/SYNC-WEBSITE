@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <!-- link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'-->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet" />
-        <link href="main.css?v=.011" rel="stylesheet" />
+        <link href="nav.css" rel="stylesheet" /><link href="main.css?v=.011" rel="stylesheet" />
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -43,7 +43,7 @@
         <link rel="manifest" href="site.webmanifest">
     </head>
     <body>
-        <div id="disabled_menu"></div>
+          <div id="disabled_menu"></div>
         <!--
         ============================================
         =  =====  ==        ==  =======  ==  ====  =
@@ -57,23 +57,33 @@
         =  =====  ==        ==  =======  ===      ==
         ============================================
       -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
-          <a class="navbar-brand text-light" href="#" data-toggle="collapse" data-target="#home" aria-expanded="false" aria-controls="bondBuilder">HOME</a>
-          <button class="logo neumorph navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:60px;">
-                <div class="anqimated-icon1"><span></span><span></span><span></span></div>
-              </button>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
+        <a class="navbar-brand text-light" href="#" data-toggle="collapse" data-target="#home" aria-expanded="false" aria-controls="bondBuilder"><img src="img/widelogo.png" class="wideLogo"></a>
+        <button class="logo neumorph navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:60px;">
+              <div class="anqimated-icon1"><span></span><span></span><span></span></div>
+            </button>
 
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav mr-auto text-light">
-              <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">FRS</a><!-- div class="navspacer">|</div -->
-              <a class="nav-item nav-link" href="https://sync-network.gitbook.io/" target="_blank" >FAQ</a><!-- div class="navspacer">|</div -->
-              <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BUILDER</a><!-- div class="navspacer">|</div -->
-              <a class="nav-item nav-link" href="#">MARKET</a><!-- div class="navspacer">|</div -->
-              <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#stats" aria-expanded="false" aria-controls="bondBuilder">DASHBOARD</a>
-            </ul>
-
-          </div>
-        </nav>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav mr-auto text-light">
+            <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">FRS</a><!-- div class="navspacer">|</div -->
+            <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BUILDER</a><!-- div class="navspacer">|</div -->
+            <a class="nav-item nav-link" href="#">MARKET</a><!-- div class="navspacer">|</div -->
+            <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#stats" aria-expanded="false" aria-controls="bondBuilder">DASHBOARD</a>
+          </ul>
+              <div class="dropdown">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    More Information
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://sync-network.gitbook.io/" target="_blank" >FAQ</a>
+                    <a class="dropdown-item" href="https://sync-network.gitbook.io/" target="_blank" >Guide</a>
+                    <a class="dropdown-item" href="https://etherscan.io/address/0xb6ff96b8a8d214544ca0dbc9b33f7ad6503efd32" target="_blank" >SYNC Contract</a>
+                    <a class="dropdown-item" href="https://uniswap.info/token/0xb6ff96b8a8d214544ca0dbc9b33f7ad6503efd32" target="_blank" >UNISWAP</a>
+                    <a class="dropdown-item" href="https://sync-network.gitbook.io/" target="_blank" >Whitepaper</a>
+                  </div>
+                </div>
+        </div>
+      </nav>
       <!--
       ============================================
       =  =====  ==        ==  =======  ==  ====  =
@@ -299,9 +309,9 @@
 
 
                     <!-- The Timeline -->
-                    <div class="row">
+                    <div class="row" id="#roadmap">
                         <div class="col-md-12">
-                          <h1 class="title">Timeline</h1>
+                          <h1 class="title">Roadmap</h1>
                               <ul class="timeline">
                                 <!-- Item 1 -->
                                 <li>
@@ -385,8 +395,9 @@
             ==================================================================
             -->
             <section id="bondBuilder" class="collapse" data-parent="#dapps">
+                <div class="container neumorph pt-5">
               <div class="row">
-                  <div class="col-md-6 col-sm-12 offset-md-1 offset-lg-3">
+                  <div class="col-md-12 col-sm-12">
                     <!-- img alt="CBond Builder" src="img/bondbuilder.webp" style="padding-top: 50px; margin: auto; display: block;" /-->
                     <h1 class="title">Cbond Builder</h1>
                   </div>
@@ -403,7 +414,7 @@
                             <input class="noclick" id="pair" type="text" value="" placeholder="NONE" required="" />
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="text-align: center;">
                         <h1 style="font-size: 40px;">Asset Amount</h1>
 
                         <div class="bond2input">
@@ -430,7 +441,7 @@
                             <input id="syncAmount" type="number" value="" placeholder="0 SYNC" required="" style="pointer-events: none; font-size: 16px;" />
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12" >
                         <div class="bond2input">
                             <a class="neumorphicbutton textinput"></a>
                             <input id="syncValue" type="number" value="" placeholder="$0" required="" style="pointer-events: none; font-size: 16px;" />
@@ -450,7 +461,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="text-align: center;">
                         <h1 style="font-size: 40px;">Years</h1>
 
                         <div class="bond2input">
@@ -469,6 +480,7 @@
                         </div>
                     </div>
                 </div>
+              </div>
             </section>
             <!--
             Banner:(refresh preview)
@@ -653,10 +665,10 @@
         <hr />
 
         <!--  /div><!--lost div? -->
-
+</div>        <!-- Container Fluid -->
         <!-- END DOCUMENT -->
         <footer style="padding-top: 60px;">
-            <div class="container pt-5 border-bottom">
+            <div class="container pt-5">
                 <div class="row">
                     <div class="col-md-3 col-sm-12 mb-3 text-center">
                         <div class="logo rotateIn" style="width: 100%; height: 200px;"></div>
@@ -726,9 +738,10 @@
                 </div>
             </div>
         </footer>
-</div>        <!-- Container Fluid -->
+
 
         <script>
+
             function updateTextInput(val) {
                 document.getElementById("assetAmount").value = val;
             }
@@ -786,9 +799,9 @@
             });
         </script>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="flipclock-min.js"></script>
 
     </body>
