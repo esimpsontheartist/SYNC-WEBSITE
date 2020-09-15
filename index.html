@@ -72,7 +72,7 @@
             <a class="nav-item nav-link" href="#">MARKET</a><!-- div class="navspacer">|</div -->
             <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#stats" aria-expanded="false" aria-controls="bondBuilder">DASHBOARD</a>
           </ul>
-              <div class="dropdown">
+              <div class="dropdown" style="margin: 10px;">
                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background: linear-gradient(145deg, #273448, #385c90);    border: 1px solid #2e4b76;    box-shadow: 4px 4px 7px #121e30, -3px -3px 7px #2e4c78;">
                     More Information
                   </button>
@@ -279,7 +279,7 @@
 
 
                     <!-- Distro Start -->
-                    <section class="section services-section" id="services">
+ <section class="section services-section" id="services">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -371,6 +371,52 @@
         </div>
     </div>
 </section>
+<!-- Distro Start -->
+<section class="section services-section" id="services">
+<div class="container">
+<div class="row">
+<div class="col-lg-9">
+<div class="section-title">
+<h2>Dual Smart Contracts</h2>
+<p>Two contracts system consisting of SYNC token and CBonds work in tandem to create the SYNC Network. </p>
+</div>
+</div>
+</div>
+<div class="row">
+<!-- feaure box -->
+<div class="col-sm-6 col-lg-6">
+<div class="feature-box-1 neumorph">
+<div class="icon">
+    <i class="fa fa-sync"></i>
+</div>
+<div class="feature-content">
+    <h5>SYNC TOKEN</h5>
+    <p>ADDRESS: 0x1234567890</p>
+    <p>This contract is responsible for the SYNC token and it's assosiated minting and burning functions.</p>
+</div>
+</div>
+</div>
+<!-- / -->
+<!-- feaure box -->
+<div class="col-sm-6 col-lg-6">
+<div class="feature-box-1 neumorph">
+<div class="icon">
+    <i class="fas fa-file-contract"></i>
+</div>
+<div class="feature-content">
+    <h5>CBOND</h5>
+    <p>ADDRESS: 0x1234567890</p>
+    <p>The CBond contract communicates to the SYNC token contract to mint and burn SYN tokens. The Cbond contract holds the liquidity tokens until the CBond matures. At maturity you can cash out a CBond to obtain the orginal liquidity tokens, and SYNC tokens with interest.</p>
+</div>
+</div>
+</div>
+<!-- / -->
+</div>
+</div>
+</section>
+
+
+
                     <div class="row">
                         <div class="col-md-2 offset-md-1 offset-lg-2">
                             <div class="logo rotateIn" style="width: 100%; height: 300px; margin-top: 60px;"></div>
@@ -896,7 +942,15 @@
                     });
 
 
-
+                    // Transition effect for navbar
+                          $(window).scroll(function() {
+                            // checks if window is scrolled more than 500px, adds/removes solid class
+                            if($(this).scrollTop() > 500) {
+                                $('.navbar').addClass('solid');
+                            } else {
+                                $('.navbar').removeClass('solid');
+                            }
+                          });
 
                 });
             });
