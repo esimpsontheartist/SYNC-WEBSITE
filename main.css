@@ -51,11 +51,15 @@ body {
   }
 
 .title{
-  font-weight: 800;
+     /*  font-weight: 800;
       font-size: 100px;
-    /*  text-shadow: 0 0 3px black, 2px -2px 5px #2174bb99, -2px 2px 4px #022746c4, -3px -3px 9px rgb(58 97 154 / 90%), 0px 0px 6px rgb(141 186 255), 5px 5px 10px rgb(0 0 0); */
+     /*  text-shadow: 0 0 3px black, 2px -2px 5px #2174bb99, -2px 2px 4px #022746c4, -3px -3px 9px rgb(58 97 154 / 90%), 0px 0px 6px rgb(141 186 255), 5px 5px 10px rgb(0 0 0); */
       /* -webkit-text-stroke: 1px rgba(0,123,255,.5); */
-      -webkit-text-stroke: 2px rgb(0 0 0 / 75%);
+      /*-webkit-text-stroke: 2px rgb(0 0 0 / 75%); */
+      -webkit-text-stroke: 1px #00000026;
+      font-size: 114px;
+      font-variant-caps: small-caps;
+      text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052 !important;      
 }
 
 .flip-clock-wrapper {
