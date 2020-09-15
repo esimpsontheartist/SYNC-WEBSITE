@@ -59,18 +59,20 @@ body {
       -webkit-text-stroke: 1px #00000026;
       font-size: 114px;
       font-variant-caps: small-caps;
-      text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052 !important;      
+      text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052 !important;
 }
 
 .flip-clock-wrapper {
   font-family: 'Montserrat', sans-serif !important;
  font-size:14px  !important;
- text-shadow: 2px 2px 4px black;
+ text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052;
 }
 
 .white-text,.flip-clock-label {
   color:white !important;
-  text-shadow: 2px 2px 4px black;}
+  font-variant-caps: small-caps;
+    text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052 !important;
+  }
 
 option {display:none;border:none !important;}
 
@@ -1020,11 +1022,9 @@ Custom media queries
       top: 0;
       content: ' ';
       display: block;
-      width: 6px;
+      width: 7px;
       height: 100%;
       margin-left: -3px;
-      z-index: 5;
-      box-shadow: 3px 3px 4px #0094c700, -1px -1px 0 #799bb347, 1px -1px 3px #2174bb99, -1px 1px 0 #022746c4, 1px 1px 3px #0000005c, -2px -2px 8px rgb(58 97 154 / 90%), 0px 0px 5px rgb(141 186 255), 2px 2px 6px rgb(0 0 0 / 79%), 1px 2px 5px #3560a200;
       border-radius: 30px;
       background-color: ghostwhite;
       background-image: linear-gradient(90deg, #000000, #2323238c 10%, #65656500 );
@@ -1064,14 +1064,16 @@ Custom media queries
 }
 
 .flag {
-  position: relative;
+      position: relative;
       display: inline;
-      background: rgb(158 158 158 / 25%);
-      padding: 6px 10px;
-      border-radius: 14px;
+      padding: 6px 15px;
+      border-radius: 40px;
       text-align: left;
-      box-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 4px 4px 6px rgb(0 0 0 / 79%), 4px 4px 7px #3560a200 !important;
-      background-image: linear-gradient(315deg, #2b5184 0%, #0d2341 50%, #2b5184 100%);
+      background-image: linear-gradient(160deg, #2b5184 25%, #3097d4 50%, #2b5184 75%);
+      box-shadow: 2px 3px 4px #0d2341 !important;
+      border: 1px solid #2a51888f !important;
+      -webkit-text-stroke: 1px #e6e6e65e;
+      text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052;
 }
 
 .direction-l .flag {
@@ -1094,7 +1096,7 @@ Custom media queries
   top: 50%;
   right: -59px;
   content: ' ';
-  box-shadow:  3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
+/*  box-shadow:  3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200; */
   background: #45648f; /*radial-gradient(circle, #45648f 0%, #45648f 100%);*/
   border: 2px solid #ccc;
   border-radius: 30px;
@@ -1108,6 +1110,7 @@ Custom media queries
   background-position: center;
   background-repeat: no-repeat;
   z-index: 10;
+  box-shadow: 3px 3px 3px #00000078;
 }
 
 .direction-r .flag:before {
@@ -1164,16 +1167,16 @@ Custom media queries
 }
 
 .time {
-      display: inline-block;
-      padding: 4px 6px;
-      text-shadow: 1px 1px 2px #42424285;
-      box-shadow: 3px 3px 4px #0094c700, -1px -1px 0 #799bb347, 1px -1px 3px #2174bb99, -1px 1px 0 #022746c4, 1px 1px 3px #0000005c, -2px -2px 8px rgb(58 97 154 / 90%), 0px 0px 5px rgb(141 186 255), 2px 2px 6px rgb(0 0 0 / 79%), 1px 2px 5px #3560a200;
+  display: inline-block;
+      padding: 6px 9px;
+      text-shadow: 1px 1px 1px #0000002e;
       border-radius: 30px;
       background-color: ghostwhite;
-      background-image: linear-gradient(0deg, #00000063, #2323238c 10%, #65656500 );
+      background-image: linear-gradient(0deg, #00000063, #23232345 10%, #65656500 );
       margin: 6px;
       color: #003c6f;
-      font-size: 11px;
+      font-size: 13px;
+      box-shadow: 2px 3px 4px #0d234199;
 }
 
 .desc {
