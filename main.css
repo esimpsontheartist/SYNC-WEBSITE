@@ -11,6 +11,32 @@ body {
   background-image: linear-gradient(315deg, #0b73ff 0%, #529a86 50%, #0570ff7a 100%) !important;
   font-family: 'Montserrat', sans-serif !important;
   padding-top:120px;
+  overflow-x: hidden
+}
+
+.jumbotron {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -119px -15px;
+  padding-top: 150px !important;
+
+    background-color: #a9a9a954 !important;;
+    border-bottom: 5px solid #529a86;
+}
+.jumbotron:before {
+      content: " ";
+      background-image: url('https://images.unsplash.com/photo-1476445704028-a36e0c798192?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&h=836&q=80');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.35;
 }
 
 .neumorph {
