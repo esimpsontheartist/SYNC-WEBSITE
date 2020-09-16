@@ -1,9 +1,9 @@
 html {background:#2e4972;
   /* background-image:url(img/background.jpg); */
   background-attachment:fixed;
-  font-family: 'Montserrat', sans-serif !important;
-}
 
+}
+p { font-family: 'Syncopate', sans-serif;}
 
 body {
   background:transparent !important;
@@ -60,6 +60,7 @@ body {
       font-size: 114px;
       font-variant-caps: small-caps;
       text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052 !important;
+       font-family: 'Syncopate', sans-serif;
 }
 
 .flip-clock-wrapper {
@@ -116,6 +117,7 @@ hr {width: 50vw;}
   -webkit-transition: ease all 0.35s;
   transition: ease all 0.35s;
   top: 0;
+  min-height: 333px;
 }
 .feature-box-1 * {
   -moz-transition: ease all 0.35s;
