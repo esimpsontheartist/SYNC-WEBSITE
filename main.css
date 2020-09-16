@@ -463,13 +463,14 @@ Clear Select Styles
 }
 
 .progress {
-      background-image: linear-gradient(-180deg, #3e3e3f 0%, #ffffff 30%, #e6e6e6 85%, #546979 100%) !important;
-      height: 29px !important;
-      margin-bottom: 20px !important;
-      background-color: #e6e6e6 !important;
-      border-radius: 15px !important;
-      border: 1px solid #14274ef5  !important;
-      box-shadow: 6px 6px 5px #0094c700, -3px -2px 2px #799bb347, 1px -1px 5px #2174bb99, -1px 3px 4px #022746c4, 3px 1px 3px #0000005c, -5px -5px 8px rgb(58 97 154 / 90%), 2px 2px 9px rgb(141 186 255), 4px 4px 8px rgb(0 0 0 / 79%), 4px 4px 6px #3560a200 !important;
+  background-image: linear-gradient(-180deg, #3e3e3f 0%, #ffffff 30%, #e6e6e6 85%, #546979 100%) !important;
+  height: 29px !important;
+  margin-bottom: 20px !important;
+  background-color: #e6e6e6 !important;
+  border-radius: 15px !important;
+  border: 1px solid #14274ef5 !important;
+  /* box-shadow: 6px 6px 5px #0094c700, -3px -2px 2px #799bb347, 1px -1px 5px #2174bb99, -1px 3px 4px #022746c4, 3px 1px 3px #0000005c, -5px -5px 8px rgb(58 97 154 / 90%), 2px 2px 9px rgb(141 186 255), 4px 4px 8px rgb(0 0 0 / 79%), 4px 4px 6px #3560a200 !important; */
+  box-shadow: 2px 2px 5px #00000075;
 }
 
 .progress-bar::after {
