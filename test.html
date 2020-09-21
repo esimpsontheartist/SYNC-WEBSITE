@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet" />
         <link href="//fonts.googleapis.com/css?family=Syncopate&subset=latin" rel="stylesheet" type="text/css">
 
-        <link href="nav.css" rel="stylesheet" /><link href="main.css?v=.012" rel="stylesheet" />
+        <link href="nav2.css" rel="stylesheet" /><link href="main2.css?v=.012" rel="stylesheet" />
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -63,17 +63,27 @@
       -->
       <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
         <a class="navbar-brand text-light" href="#" data-toggle="collapse" data-target="#home" aria-expanded="false" aria-controls="bondBuilder"><img src="img/widelogo.png" class="wideLogo"></a>
-        <button class="logo neumorph navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:60px;">
-              <div class="anqimated-icon1"><span></span><span></span><span></span></div>
+        <button class="neumorph navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:60px;">
+              <i class="fas fa-bars" style="color:white"></i>
             </button>
 
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav mr-auto text-light">
-            <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">FRS</a>
-            <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BUILDER</a>
+            <li class="nav-item dropdown" style="background: none;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Products
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">Fair Release</a>
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">Bond Builder</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#stats" aria-expanded="false" aria-controls="bondBuilder">Bond Economy</a>
+              </div>
+            </li>
             <a class="nav-item nav-link" href="#">MARKET</a>
-            <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#stats" aria-expanded="false" aria-controls="bondBuilder">DASHBOARD</a>
           </ul>
+
+          <a id="dark" class=" first-button" onclick="dark()"><i class="fas fa-adjust"></i></a>
               <div class="dropdown" style="margin: 10px;">
                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background: linear-gradient(145deg, #273448, #385c90);    border: 1px solid #2e4b76;      box-shadow: 3px 3px 5px #00000094  /* box-shadow: 4px 4px 7px #121e30, -3px -3px 7px #2e4c78;*/">
                     TEST SITE
@@ -248,7 +258,7 @@ TEST SITE
           =============================================================
           -->
 
-        <div class="container-fluid white-text" id="dapps">
+        <div class="container-fluid white-text" id="dapps" style="min-height: 100vh;">
             <!-- BEGIN DOCUMENT -->
 
             <!--
@@ -268,12 +278,15 @@ TEST SITE
 
                 <section id="home" class="collapse show" data-parent="#dapps">
 
-                  <div class="jumbotron jumbotron-fluid">
+                  <div class="jumbotron jumbotron-fluid" style="position: fixed;    top: 0;    right: 0;    bottom: 0;    left: 0;">
                     <div class="container">
-                      <h1 class="title" style="    font-family: 'Syncopate', sans-serif !important;    -webkit-text-stroke: 1px #f1f1f1;    font-variant-caps: small-caps;    color: #e2e2ea;    text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052 !important;    font-weight: 800;">Synchronized Cryptobonds</h1>
-                      <p style="background-image: linear-gradient(0deg, transparent, #2b5177 30%, #6175a5 60%,transparent);    padding: 30px;    border-radius: 50px 50px 90px 90px;   font-size: 27px;    -webkit-text-stroke: 1px #00000026;text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052 !important;">SYNC is used create tradable locked liquidity that we call Cryptobonds.</p>
+                      <h1 class="title" style="font-family: 'Syncopate', sans-serif !important;   font-variant-caps: small-caps;    color: #111; font-weight: 800;">Cryptobonds</h1>
+                      <p style="padding: 30px;    border-radius: 50px 50px 90px 90px;   font-size: 27px;   color: #111;    -webkit-text-stroke: 1px #00000026;">SYNC is used create tradable locked liquidity that we call Cryptobonds.</p>
                     </div>
                   </div>
+                </section>
+
+                  <section id="about" class="collapse" data-parent="#dapps">
 
                   <div class="container my-5 py-5 z-depth-1">
 
@@ -313,7 +326,7 @@ TEST SITE
                         <div class="col-lg-6">
                             <div class="section-title">
                                 <h2 class="text-left">Ease of Use</h2>
-                                <p>We do all the heavy lifting and validation in the contract to ensure that building Crypto Bonds is simple, intuitive and sound. </p>
+                                <p>We do all the heavy lifting and validation in the contract to ensure that building Cryptobonds is simple, intuitive and sound. </p>
                             </div>
                         </div>
                     </div>
@@ -325,13 +338,13 @@ TEST SITE
 
                           <div class="col-lg-6">
                             <h4 class="text-left">Step 1: Liquidity Pair From Uniswap</h4>
-                            <p style="padding:15px 0;">Add equal parts of your favorite token with ETH and earn on every trade on Uniswap even while bonded. That's the power of Crypto Bonds.</p>
+                            <p style="padding:15px 0;">Add equal parts of your favorite token with ETH and earn on every trade on Uniswap even while bonded. That's the power of Cryptobonds.</p>
                             <hr style="">
                             <h4 class="text-left">Step 2: Get SYNC Token From Uniswap</h4>
                             <p style="padding:15px 0;">While you're there, pick up some SYNC tokens from Uniswap or our time limited offer from the Fair Release Schedule.</p>
                             <hr style="">
-                            <h4 class="text-left">Step 3: Put them together in the Crypto Bond Builder</h4>
-                            <p style="padding:15px 0;">Combine them together to create a Crypto Bond Set parameters such as time and if you want quarterly divs to make it uniquily yours.</p>
+                            <h4 class="text-left">Step 3: Put them together in the Cryptobond Builder</h4>
+                            <p style="padding:15px 0;">Combine them together to create a Cryptobond Set parameters such as time and if you want quarterly divs to make it uniquily yours.</p>
                             <hr style="">
                           </div>
 
@@ -340,13 +353,13 @@ TEST SITE
                         </div>
                   </div>
                     <!-- Distro Start -->
- <section class="section services-section" id="services">
+ <section class="section services-section" id="services1">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-title">
                     <h2 class="text-left">Tokenomics</h2>
-                    <p>A two token system consisting of SYNC token and Crypto Bonds working together for risk distribution across uniswap liquidity pairs. </p>
+                    <p>A two token system consisting of SYNC token and Cryptobonds working together for risk distribution across uniswap liquidity pairs. </p>
                 </div>
             </div>
         </div>
@@ -359,7 +372,7 @@ TEST SITE
                         <i class="fas fa-desktop"></i>
                     </div>
                     <div class="feature-content">
-                        <p>Better together - SYNC is required to create Crypto Bonds. This combination has interesting and emergent properties.</p>
+                        <p>Better together - SYNC is required to create Cryptobonds. This combination has interesting and emergent properties.</p>
                     </div>
                 </div>
             </div>
@@ -393,12 +406,12 @@ TEST SITE
             <!-- feaure box -->
             <div class="col-sm-6 col-lg-4">
                 <div class="feature-box-1 neumorph">
-                  <h5 style="float: right;text-align: right;">Lucky<br>Crypto Bonds</h5>
+                  <h5 style="float: right;text-align: right;">Lucky<br>Cryptobonds</h5>
                     <div class="icon">
                         🍀
                     </div>
                     <div class="feature-content">
-                        <p>Occasionally creating a Crypto Bond results in a "Lucky Crypto Bond" and gets a Lucky bonus interest rate.</p>
+                        <p>Occasionally creating a Cryptobond results in a "Lucky Cryptobond" and gets a Lucky bonus interest rate.</p>
                     </div>
                 </div>
             </div>
@@ -411,7 +424,7 @@ TEST SITE
                         <i class="fa fa-th"></i>
                     </div>
                     <div class="feature-content">
-                        <p>Crypto Bonds require both SYNC tokens & Uniswap Liquidity Pairs, reducing the risk to Crypto Bond holders by diversifying their assets.</p>
+                        <p>Cryptobonds require both SYNC tokens & Uniswap Liquidity Pairs, reducing the risk to Cryptobond holders by diversifying their assets.</p>
                     </div>
                 </div>
             </div>
@@ -424,7 +437,7 @@ TEST SITE
                         <i class="fa fa-cog"></i>
                     </div>
                     <div class="feature-content">
-                        <p>Crypto Bonds are highly configurable for your needs. For example longer terms pays better rates.</p>
+                        <p>Cryptobonds are highly configurable for your needs. For example longer terms pays better rates.</p>
                     </div>
                 </div>
             </div>
@@ -439,7 +452,7 @@ TEST SITE
 <div class="col-lg-12">
 <div class="section-title">
 <h2 class="text-left">Dual Smart Contracts</h2>
-<p>Two contracts: SYNC token and Crypto Bonds together to create the SYNC Network. </p>
+<p>Two contracts: SYNC token and Cryptobonds together to create the SYNC Network. </p>
 </div>
 </div>
 </div>
@@ -465,9 +478,9 @@ TEST SITE
     <i class="fas fa-file-contract"></i>
 </div>
 <div class="feature-content">
-    <h5>Crypto Bond</h5>
+    <h5>Cryptobond</h5>
     <p>ADDRESS: UNPUBLISHED</p>
-    <p>The Crypto Bond contract communicates to the SYNC token contract to mint and burn SYN tokens. The Crypto Bond contract holds the liquidity tokens until the Crypto Bond matures. At maturity you can cash out a Crypto Bond to obtain the orginal liquidity tokens, and SYNC tokens with interest.</p>
+    <p>The Cryptobond contract communicates to the SYNC token contract to mint and burn SYN tokens. The Cryptobond contract holds the liquidity tokens until the Cryptobond matures. At maturity you can cash out a Cryptobond to obtain the orginal liquidity tokens, and SYNC tokens with interest.</p>
 </div>
 </div>
 </div>
@@ -512,7 +525,7 @@ TEST SITE
                                       <span class="flag">NFT Token Launch</span>
                                       <span class="time-wrapper"><span class="time">After Audit</span></span>
                                     </div>
-                                    <div class="desc">The Crypto Bond NFT will offically go live allowing the creation of the worlds first Cryptobond!</div>
+                                    <div class="desc">The Cryptobond NFT will offically go live allowing the creation of the worlds first Cryptobond!</div>
                                   </div>
                                 </li>
 
@@ -553,8 +566,8 @@ TEST SITE
                 <div class="container neumorph pt-5">
               <div class="row">
                   <div class="col-md-12 col-sm-12">
-                    <!-- img alt="Crypto Bond Builder" src="img/bondbuilder.webp" style="padding-top: 50px; margin: auto; display: block;" /-->
-                    <h1 class="title">Crypto Bond Builder</h1>
+                    <!-- img alt="Cryptobond Builder" src="img/bondbuilder.webp" style="padding-top: 50px; margin: auto; display: block;" /-->
+                    <h1 class="title">Cryptobond Builder</h1>
                   </div>
               </div>
 
@@ -667,10 +680,61 @@ TEST SITE
             -->
 
             <section id="frs" class="collapse" data-parent="#dapps">
+              <div class="container">
+              	<div class="row">
+              		<div class="col-md-12">
+                      <h1 class="text-center">Fair Release Schedule</h1>
+              		</div>
+              	</div>
+              	<div class="row">
+              		<div class="col-md-4">
+              			<div class="row">
+              				<div class="col-md-8 neumorph">
+                        <div style="display: flex; justify-content: center; margin-top: -20px;">
+                            <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#CONNECT_WALLET"><span>CONNECT</span></a>
+                        </div>
+                          <div class="logo rotateIn" style="width: 100%; height: 300px; margin-top: 60px;"></div>
+                          <h3 id="yourSYNC" style="padding-bottom: 15px;    text-align: center;">Your SYNC:</h3>
+                          <div style="display: flex; justify-content: center; margin-top: -20px;">
+                              <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#GET_SYNCED"><span>GET SYNC</span></a>
+                          </div>
+              				</div>
+              			</div>
+              		</div>
+              		<div class="col-md-8">
+              			<div class="row">
+              				<div class="col-md-12 neumorph">
+                        <div class="row ">
+                            <div class="col-md-6">
+                                <h4>TODAY'S DISTRIBUTION</h4>
+                                <h1 id="syncTotal">♻5,000,000</h1>
+                                <h4>SYNC TOKENS</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <br><h4>9/1/2020</h4>
+                                <h1 id="ethRecieved">Ξ 1,234</h1>
+                                <h4>ETH Recieved</h4>
+                            </div>
+                        </div>
+              				</div>
+              			</div>
+              			<div class="row">
+
+                        <div id="frs_clock" class="col-md-12 neumorph" style="background-image: linear-gradient(18deg, rgb(243 226 199 / 69%) 0%, rgb(193 158 103 / 72%) 50%, rgb(182 141 76 / 70%) 51%, rgb(233 212 179 / 72%) 100%);">
+                          <h4 style="margin: 25px auto;">CURRENT DISTRIBUTION ENDS IN</h4>
+                          <div style="margin: auto;"><div class="clock" id="clock1"></div></div>
+                          <h5 style="font-size: 15px;text-align: center;">*Depending on the Ethereum network traffic, figures may be delayed.</h5>
+                        </DIV>
+
+              			</div>
+              		</div>
+              	</div>
+              </div>
+              <hr>
                 <div class="row">
                     <div class="col-md-6 col-sm-12 offset-md-1 offset-lg-3">
                         <h1 class="title">Fair Release Schedule</h1>
-                        <!--img alt="Crypto bonds" src="img/title3-cbonds.webp?v2" style="width: 100%;" / -->
+                        <!--img alt="Cryptobonds" src="img/title3-cbonds.webp?v2" style="width: 100%;" / -->
                     </div>
                 </div>
 
@@ -719,7 +783,7 @@ TEST SITE
                             </div>
                         </div>
                         <div class="row" style="    padding-top: 27px;">
-                          <div class="col-md-12 neumorph" style="background-image: linear-gradient(18deg, rgb(243 226 199 / 69%) 0%, rgb(193 158 103 / 72%) 50%, rgb(182 141 76 / 70%) 51%, rgb(233 212 179 / 72%) 100%);">
+                          <div id="frs_clock" class="col-md-12 neumorph" style="background-image: linear-gradient(18deg, rgb(243 226 199 / 69%) 0%, rgb(193 158 103 / 72%) 50%, rgb(182 141 76 / 70%) 51%, rgb(233 212 179 / 72%) 100%);">
                             <h4 style="margin: 25px auto;">CURRENT DISTRIBUTION ENDS IN</h4>
                             <div style="margin: auto;"><div class="clock" id="clock1"></div></div>
                             <h5 style="font-size: 15px;text-align: center;">*Depending on the Ethereum network traffic, figures may be delayed.</h5>
@@ -727,6 +791,7 @@ TEST SITE
                         </div>
                     </div>
                 </div>
+
 
                 <div class="row" style="padding-top:60px;">
                     <div class="col-md-3"></div>
@@ -744,7 +809,11 @@ TEST SITE
                     </div>
                     <div class="col-md-3"></div>
                 </div>
-
+                <div class="row">
+                    <div class="col-lg-12">
+                      <h2>(5,000,000 SYNC / Total ETH Sent By Everyone) X ETH You Committed = Your SYNC</h2>
+                    </div>
+                </div>
             </section>
             <!-- Distro End -->
             <!--
@@ -840,7 +909,7 @@ TEST SITE
         <!--  /div><!--lost div? -->
 </div>        <!-- Container Fluid -->
         <!-- END DOCUMENT -->
-        <footer style="padding-top: 60px;">
+        <footer class="collapse show" style="padding-top: 60px;">
             <div class="container pt-5">
                 <div class="row">
                     <div class="col-md-3 col-sm-12 mb-3 text-center">
@@ -862,8 +931,8 @@ TEST SITE
                         <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
                             <h5 class="mb-4 font-weight-bold text-uppercase">Developers</h5>
                             <ul class="list-group">
-                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://github.com/">Open Source</a></li>
-                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://stackshare.io/">Technology</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="https://github.com/">Open Source</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="">Technology</a></li>
                             </ul>
                         </div>
 
@@ -891,13 +960,13 @@ TEST SITE
                                     <a href="https://github.com/C-O-F-E" target="_blank">Github</a>
                                 </li-->
                                 <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                                    <a target="_blank" href="https://medium.com" target="_blank">Medium</a>
+                                    <a target="_blank" href="https://medium.com">Medium</a>
                                 </li>
                                 <!--li class="list-group-item bg-transparent border-0 p-0 mb-2">
                                     <a href="https://www.facebook.com/lol-yeah-right/" target="_blank">Facebook</a>
                                 </li-->
                                 <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                                    <a target="_blank" href="https://www.youtube.com/channel/" target="_blank">YouTube</a>
+                                    <a target="_blank" href="https://www.youtube.com/channel/">YouTube</a>
                                 </li>
                             </ul>
                         </div>
@@ -982,6 +1051,11 @@ TEST SITE
 
                 });
             });
+
+            function dark() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
         </script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
