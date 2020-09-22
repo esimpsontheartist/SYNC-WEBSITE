@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet" />
         <link href="//fonts.googleapis.com/css?family=Syncopate&subset=latin" rel="stylesheet" type="text/css">
 
-        <link href="nav2.css" rel="stylesheet" /><link href="main2.css?v=.012" rel="stylesheet" />
+
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -17,7 +17,7 @@
 
         <!-- Latest compiled and minified CSS -->
         <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" /-->
-        <link rel="stylesheet" href="flipclock.css" />
+        <link rel="stylesheet" href="flipclock.css" /><link href="nav2.css" rel="stylesheet" /><link href="main2.css?v=.012" rel="stylesheet" />
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -61,9 +61,9 @@
         =  =====  ==        ==  =======  ===      ==
         ============================================
       -->
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
+      <nav class="navbar fixed-top navbar-expand-lg">
         <a class="navbar-brand text-light" href="#" data-toggle="collapse" data-target="#home" aria-expanded="false" aria-controls="bondBuilder"><img src="img/widelogo.png" class="wideLogo"></a>
-        <button class="neumorph navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:60px;">
+        <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:60px;">
               <i class="fas fa-bars" style="color:white"></i>
             </button>
 
@@ -226,7 +226,7 @@
                         <h2 style="margin: 5px 0 -10px 0; text-align: center;">Step 1: Send Ethereum</h2>
 
                         <div class="bondinput" style="display: inline-block; padding-left: 8%;">
-                            <input type="text" value="" placeholder="0" required="" style="color: darkgrey;" />
+                            <input type="text" value="" placeholder="0" required="" style="color: #3e3e3e;" />
                         </div>
 
                         <img alt="arrow" src="img/arrow.webp" style="margin: -25px 0 -55px; z-index: 5; position: relative; left: 40%;" />
@@ -287,8 +287,8 @@
 
                   <div class="jumbotron jumbotron-fluid" style="position: fixed;    top: 0;    right: 0;    bottom: 0;    left: 0;">
                     <div class="container">
-                      <h1 class="title" style="font-family: 'Syncopate', sans-serif !important;   font-variant-caps: small-caps;    color: #111; font-weight: 800;">Cryptobonds</h1>
-                      <p style="padding: 30px;    border-radius: 50px 50px 90px 90px;   font-size: 27px;   color: #111;    -webkit-text-stroke: 1px #00000026;">High yields meets reduced risk.<!--SYNC is used create tradable locked liquidity that we call Cryptobonds. --></p>
+                      <h1 class="title" style="font-family: 'Syncopate', sans-serif !important;   font-variant-caps: small-caps;   font-weight: 800;">Cryptobonds</h1>
+                      <p style="padding: 30px;    border-radius: 50px 50px 90px 90px;   font-size: 27px; -webkit-text-stroke: 1px #00000026;">High yields meets reduced risk.<!--SYNC is used create tradable locked liquidity that we call Cryptobonds. --></p>
                     </div>
                   </div>
                 </section>
@@ -569,8 +569,8 @@
             =      =====      ===    ==        ==       ===        ==  ====  =
             ==================================================================
             -->
-            <section id="bondBuilder" class="collapse" data-parent="#dapps">
-                <div class="container neumorph pt-5">
+            <section id="bondBuilder" class="container collapse" data-parent="#dapps">
+                <div class=" neumorph pt-5">
               <div class="row">
                   <div class="col-md-12 col-sm-12">
                     <!-- img alt="Cryptobond Builder" src="img/bondbuilder.webp" style="padding-top: 50px; margin: auto; display: block;" /-->
@@ -686,8 +686,8 @@
             ==============================
             -->
 
-            <section id="frs" class="collapse" data-parent="#dapps">
-              <div class="container">
+            <section id="frs" class="container collapse" data-parent="#dapps">
+
               	<div class="row">
               		<div class="col-md-12">
                       <h1 class="text-center">Fair Release Schedule</h1>
@@ -696,11 +696,11 @@
               	<div class="row">
               		<div class="col-md-4">
               			<div class="row">
-              				<div class="col-md-8 neumorph">
+              				<div class="col-md-11 neumorph">
                         <div style="display: flex; justify-content: center; margin-top: -20px;">
                             <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#CONNECT_WALLET"><span>CONNECT</span></a>
                         </div>
-                          <div class="logo rotateIn" style="width: 100%; height: 300px; margin-top: 60px;"></div>
+                          <div class="logo rotateIn" style="width: 60%;    height: 267px;    margin: auto;"></div>
                           <h3 id="yourSYNC" style="padding-bottom: 15px;    text-align: center;">Your SYNC:</h3>
                           <div style="display: flex; justify-content: center; margin-top: -20px;">
                               <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#GET_SYNCED"><span>GET SYNC</span></a>
@@ -725,102 +725,44 @@
                         </div>
               				</div>
               			</div>
-              			<div class="row">
+                			<div class="row">
 
-                        <div id="frs_clock" class="col-md-12 neumorph" style="background-image: linear-gradient(18deg, rgb(243 226 199 / 69%) 0%, rgb(193 158 103 / 72%) 50%, rgb(182 141 76 / 70%) 51%, rgb(233 212 179 / 72%) 100%);">
-                          <h4 style="margin: 25px auto;">CURRENT DISTRIBUTION ENDS IN</h4>
-                          <div style="margin: auto;"><div class="clock" id="clock1"></div></div>
-                          <h5 style="font-size: 15px;text-align: center;">*Depending on the Ethereum network traffic, figures may be delayed.</h5>
-                        </DIV>
-
-              			</div>
-              		</div>
-              	</div>
-              </div>
-              <hr>
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 offset-md-1 offset-lg-3">
-                        <h1 class="title">Fair Release Schedule</h1>
-                        <!--img alt="Cryptobonds" src="img/title3-cbonds.webp?v2" style="width: 100%;" / -->
-                    </div>
-                </div>
-
-                <!-- Distro Start -->
-                <div class="row">
-                    <div class="col-md-2 neumorph offset-md-1 offset-lg-3">
-                      <div style="display: flex; justify-content: center; margin-top: -20px;">
-                          <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#CONNECT_WALLET"><span>CONNECT</span></a>
-                      </div>
-                        <div class="logo rotateIn" style="width: 100%; height: 300px; margin-top: 60px;"></div>
-                        <h3 id="yourSYNC" style="padding-bottom: 15px;    text-align: center;">Your SYNC:</h3>
-                        <div style="display: flex; justify-content: center; margin-top: -20px;">
-                            <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#GET_SYNCED"><span>GET SYNC</span></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4" style="padding-left: 42px;">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h3>SYNC Fair Release Schedule</h3>
-                            </div>
-                            <div class="col-md-3">
-                                <h3 id="currentPeriod">DAY 275</h3>
-                            </div>
-                        </div>
-
-                        <div class="row ">
-                            <div class="col-md-12">
-                                <div class="progress"><div class="progress-bar" style="width: 70%;">&nbsp;</div></div>
-                              </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 neumorph">
-                                <div class="row ">
-                                    <div class="col-md-6">
-                                        <h4>TODAY'S DISTRIBUTION</h4>
-                                        <h1 id="syncTotal">♻5,000,000</h1>
-                                        <h4>SYNC TOKENS</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <br><h4>9/1/2020</h4>
-                                        <h1 id="ethRecieved">Ξ 1,234</h1>
-                                        <h4>ETH Recieved</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row" style="    padding-top: 27px;">
                           <div id="frs_clock" class="col-md-12 neumorph" style="background-image: linear-gradient(18deg, rgb(243 226 199 / 69%) 0%, rgb(193 158 103 / 72%) 50%, rgb(182 141 76 / 70%) 51%, rgb(233 212 179 / 72%) 100%);">
                             <h4 style="margin: 25px auto;">CURRENT DISTRIBUTION ENDS IN</h4>
                             <div style="margin: auto;"><div class="clock" id="clock1"></div></div>
                             <h5 style="font-size: 15px;text-align: center;">*Depending on the Ethereum network traffic, figures may be delayed.</h5>
                           </DIV>
-                        </div>
-                    </div>
-                </div>
+
+                			</div>
+              		</div>
+              	</div>
+
+<hr>
 
 
                 <div class="row" style="padding-top:60px;">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <h3>EQUAL OPPORTUNITY</h3>
                         <p>SYNC Tokens have no pre-determined price; rather price is set by market demand. This reduces unfair advantages to large purchasers.</p>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <h3>BROAD DISTRIBUTION</h3>
                         <p>A 1 year distribution is to ensure everyone gets a chance to on board without diluting the early investors</p>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <h3>TRUSTLESS</h3>
                         <p>Fully powered by an unstoppable, immutable Ethereum Smart Contract.</p>
                     </div>
-                    <div class="col-md-3"></div>
                 </div>
+
+<hr>
+
                 <div class="row">
                     <div class="col-lg-12">
                       <h2>(5,000,000 SYNC / Total ETH Sent By Everyone) X ETH You Committed = Your SYNC</h2>
                     </div>
                 </div>
+
             </section>
             <!-- Distro End -->
             <!--
@@ -917,6 +859,8 @@
 </div>        <!-- Container Fluid -->
         <!-- END DOCUMENT -->
         <footer class="collapse show" style="padding-top: 60px;">
+
+<hr>
             <div class="container pt-5">
                 <div class="row">
                     <div class="col-md-3 col-sm-12 mb-3 text-center">

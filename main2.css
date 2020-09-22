@@ -25,12 +25,12 @@ body {
   /* margin: -119px -15px;
   padding-top: 150px !important;
 */
-    background-color: #a9a9a954 !important;;
+    background-color: #a9a9a954;
 /*    border-bottom: 5px solid #529a86; */
 }
 .jumbotron:before {
       content: " ";
-      background-image: url('https://images.unsplash.com/photo-1504548840739-580b10ae7715?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&h=836&q=80'); /* https://images.unsplash.com/photo-1476445704028-a36e0c798192?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&h=836&q=80 */
+      background-image: url('https://images.unsplash.com/photo-1523292864699-4dcfd824dae2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&h=836&q=80'); /*sand https://images.unsplash.com/photo-1504548840739-580b10ae7715?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&h=836&q=80 - triangles https://images.unsplash.com/photo-1476445704028-a36e0c798192?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&h=836&q=80 */
       background-size: cover;
       position: fixed;
       top: 0;
@@ -43,9 +43,9 @@ body {
 .neumorph {
     border-radius: 40px;
     box-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px #3a619ae6, 0 0 3px #8dbaff, 4px 4px 6px #00000047, 4px 4px 7px #3560a200;
-    -webkit-text-stroke: 1px #90acce85;
     padding: 20px;
-    /* background: #2b518442; * /
+    /* background: #2b518442;
+    -webkit-text-stroke: 1px #90acce85;
     background-color: #2b518470;
     background-image: linear-gradient(315deg, #2b518430 0%, #0d2341 50%, #2b518459 100%); */
     background: linear-gradient(145deg, #203554, #2e4c77);
@@ -71,7 +71,7 @@ body {
 }
 
 .white-text,.flip-clock-label {
-  color:white !important;
+/*  color:white !important; */
   font-variant-caps: small-caps;
 /*    text-shadow: 1px 1px 3px #000000, 2px 2px 2px #00000052 !important; */
   }
@@ -90,7 +90,6 @@ option {display:none;border:none !important;}
 }
 */
 
-.nav-link {color: #f8f9fa!important}
 
 
 #clock1 {
@@ -424,7 +423,7 @@ Clear Select Styles
     position: relative;
     color: #333;
     font-weight: bold;
-    -webkit-text-stroke: .25px #ababab73;
+    /* -webkit-text-stroke: .25px #ababab73; */
     background: -webkit-linear-gradient(#fff, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: #1b1b1bdb;
@@ -521,16 +520,16 @@ Clear Select Styles
 }
 
 .row h1, .row h2, .row h4 {
-      color: ghostwhite;
+  /*    color: ghostwhite; */
       text-align: center;
 }
 .row h3, .row h5, .list-group {
-  color: ghostwhite;
+  /* color: ghostwhite; */
   text-align: left;
 }
 
-.list-group-item a {    color: antiquewhite;}
-.list-group-item a:hover {   color: ghostwhite;}
+.list-group-item a {    color: #eee;}
+.list-group-item a:hover {   color: #fff;}
 
 .SuperTitles { /* text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0 0 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200; */
   -webkit-text-stroke: 1px #0d254240;
@@ -547,14 +546,12 @@ Clear Select Styles
 #eth-sync,#eth-dos,#eth-dai,#eth-link,#eth-akro,#eth-ren {    background: transparent; color: white;    border: none; }
 
 footer {
-  background: linear-gradient(0deg, rgba(18,28,43,1) 0%, rgba(46,73,114,0) 100%);
-
+/*  background: linear-gradient(0deg, rgba(18,28,43,1) 0%, rgba(46,73,114,0) 100%); */
+    background: linear-gradient(0deg, #000000b3 0%, #ffffff00 90%);
 }
 
-.dark-mode {
-background: radial-gradient(circle, #214986, #2e4972, #1b2949, #0d121d) !important;
-color:white;
-}
+
+
 /*
 ####################################################
 M O D A L B O X
@@ -582,7 +579,7 @@ M O D A L B O X
   color: ghostwhite;
 }
 
-h1, .modal-title {
+.modal-title {
 /*    text-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px rgb(58 97 154 / 90%), 0 0 3px rgb(141 186 255), 4px 4px 6px rgb(0 0 0 / 79%), 4px 4px 7px #3560a200;
     -webkit-text-stroke: 1px #90acce85; */
     margin: 0;
@@ -928,18 +925,19 @@ footer {display:none !important}
 #frs_clock {transform: scale(.75);    margin: 0 0 0 -30px;    width: 116%;  }
 
 @media (min-width: 576px) {
-
       .title {    font-size: 63px;}
       .leftISO {padding: 13% 30px 0;}
+
+      #frs_clock {transform: scale(1);       margin: 20px 30px;    width: 100%;  }
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
 #menu{left:0px;}
-footer {display:block !important}
+.neumorphicbutton {transform:scale(.8);}
 .title {    font-size: 85px;}
 /* .wideLogo {height:50px} */
-#frs_clock {transform: scale(1);    margin: 0 0 0 0px;    width: 100%;  }
+#frs_clock {transform: scale(1);        margin: 20px 30px;    width: 100%;  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -947,7 +945,8 @@ footer {display:block !important}
   #bars {display:block;}
   .navspacer {display:block;}
   .title {    font-size: 100px;}
-
+  .neumorphicbutton {transform:scale(1);}
+footer {display:block !important}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -1270,3 +1269,54 @@ display:none;
 	margin: 1em 4em 0 4em;
 }
 }
+
+.neumorph {color:white;}
+
+.wideLogo {
+  filter:invert(1);
+  }
+  nav a {color:#333;}
+
+.dark-mode {
+background: radial-gradient(circle, #214986, #2e4972, #1b2949, #0d121d) !important;
+color:white;
+}
+
+.dark-mode .jumbotron, .dark-mode .jumbotron::before {
+  background-image:none;
+      background-color: transparent;
+}
+
+.dark-mode .wideLogo{
+  filter:invert(0);
+}
+
+.dark-mode nav a{
+color:#eee;
+}
+.dark-mode .dropdown-item{
+color:#222;
+}
+
+.solid {
+/* background-image: linear-gradient(315deg, #254069 0%, #0d2341 50%, #254069 100%);*/
+  background-color: #eeeeee8f;
+  background-image: linear-gradient(180deg, rgb(255 255 255) 0%, rgba(46,73,114,0) 100%);
+  transition: background-color 1s ease 0s;
+}
+
+.dark-mode .solid {
+  background-image: linear-gradient(315deg, #254069 0%, #0d2341 50%, #254069 100%);
+  background-color: #264069;
+  transition: background-color 1s ease 0s;
+}
+
+#eth-sync,#eth-dos,#eth-dai,#eth-link,#eth-akro,#eth-ren {    background: transparent; color: white;    border: none; }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p {
+
+  }
+
+.dark-mode h1,.dark-mode .h1,.dark-mode  .h2,.dark-mode .h3,.dark-mode .h4,.dark-mode .h5,.dark-mode .h6,.dark-mode h1,.dark-mode h2,.dark-mode h3,.dark-mode h4,.dark-mode h5,.dark-mode h6,.dark-mode p {
+  color:333;
+    }

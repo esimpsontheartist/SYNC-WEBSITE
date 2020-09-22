@@ -41,15 +41,9 @@ nav {
     font-weight: 400;
     margin: -11px 0 -18px 0;
     font-size: 25px;
-    color: #f8f9fa!important;
+
   pointer-events: all;
   position: fixed !important;
   top: 0px;
   z-index: 15;
 }
-
-.navspacer{
-  display:none;
-  color:white !important;
-  padding: 4px 12px 0 12px;
-  }

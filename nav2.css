@@ -2,20 +2,36 @@
     outline: 0 auto;
 }
 
-.solid {
-/* background-image: linear-gradient(315deg, #254069 0%, #0d2341 50%, #254069 100%);*/
-  background-color: #264069;
-  transition: background-color 1s ease 0s;
-}
 
 
 @media (max-width: 987px) {
-nav {   background-color: #264069;}
+.dark-mode nav {   color: #eee;}
+.dark-mode nav {   background-color: #264069;}
+nav {   background-color: #ddd;}
+.navbar-toggler{
+   border-radius: 100%;
+   border: 2px solid transparent;
+   background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+   box-shadow: -3px -3px 6px 2px #ffffff, 5px 5px 8px 0px rgba(0, 0, 0, 0.17), 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+   transition: 0.1s;
+   margin: 10px;
+  }
+   .navbar-toggler.active, .navbar-toggler:active, .navbar-toggler:focus {
+    border: 2px solid #fafafa;
+    box-shadow: inset -3px -3px 5px 0px #ffffff, -1px -1px 4px 0px #ffffff, inset 5px 5px 10px 0px rgba(0, 0, 0, 0.12), inset 2px 2px 3px 0px rgba(0, 0, 0, 0.07), 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark-mode .navbar-toggler{
+    box-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px #3a619ae6, 0 0 3px #8dbaff, 4px 4px 6px #00000047, 4px 4px 7px #3560a200 !important;
+    background: linear-gradient(145deg, #203554, #2e4c77) !important;
+  }
+
+
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
-#dark {float:right;}  
+#dark {float:right;}
 #menu{left:0px;}
 nav {border-radius: 0px;    padding: 18px 0px 0px 20px !important; }
 }
@@ -36,15 +52,8 @@ nav {
     font-weight: 400;
     margin: -11px 0 -18px 0;
     font-size: 25px;
-    color: #f8f9fa!important;
     pointer-events: all;
     /* position: fixed !important; */
     top: 0px;
     z-index: 15;
 }
-
-.navspacer{
-  display:none;
-  color:white !important;
-  padding: 4px 12px 0 12px;
-  }
