@@ -398,7 +398,7 @@ Clear Select Styles
   margin-right:-0px;
     float: left;
     border: none;
-    font-size: 30px;
+  /*  font-size: 30px; */
     text-shadow: 0 0 2px #dedede, 3px 2px 5px #00000073;
     outline: none;
     background-color: transparent;
