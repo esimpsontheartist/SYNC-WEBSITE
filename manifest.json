@@ -1,0 +1,46 @@
+{
+  "short_name": "Cryptobonds",
+  "name": "Cryptobond Builder",
+  "description": "Create your own Cryptobonds",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#3367D6",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#3367D6",
+  "orientation": "landscape",
+  "shortcuts": [
+    {
+      "name": "Cryptobond Dashboard",
+      "short_name": "Cryptobond Dashboard",
+      "description": "View the Cryptobond Market",
+      "url": "/?v=dash&source=pwa",
+      "icons": [{ "src": "android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Cryptobond Builder",
+      "short_name": "Cryptobond Builder",
+      "description": "Build your own Cryptobonds",
+      "url": "/?v=build&source=pwa",
+      "icons": [{ "src": "android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Cryptobond Portfolio",
+      "short_name": "Cryptobond Builder",
+      "description": "View your Cryptobond portfolio",
+      "url": "/?v=portfolio&source=pwa",
+      "icons": [{ "src": "android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}
