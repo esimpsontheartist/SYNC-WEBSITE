@@ -91,6 +91,10 @@ option {display:none;border:none !important;}
 */
 
 
+.btn-primary {
+    color: #f1f1f1;
+    background-color: #0056b3;
+  }
 
 #clock1 {
   width: 466px;
