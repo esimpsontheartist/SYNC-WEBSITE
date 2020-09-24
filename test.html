@@ -821,6 +821,34 @@
                        <div class="col-md-5">
                            <div class="row neumorph">
                                <div class="col-md-12">
+                                   <div id="network">
+                                      <p>
+                                        <strong>Connected blockchain:</strong> <span id="network-name"></span>
+                                      </p>
+
+                                      <p>
+                                        <strong>Selected account:</strong> <span id="selected-account"></span>
+                                      </p>
+                                  </div>
+                                  <table class="table table-listing">
+                                    <thead>
+                                      <th>Address</th>
+                                      <th>ETH balance</th>
+                                    </thead>
+
+                                    <tbody id="accounts">
+                                    </tbody>
+                                </table>
+                                <!-- We use simple <template> templating for the example -->
+                                  <div id="templates" style="display: none">
+                                    <template id="template-balance">
+                                      <tr>
+                                        <th class="address"></th>
+                                        <td class="balance"></td>
+                                      </tr>
+                                    </template>
+                                  </div>
+
                                  <h6 class="modal-title">Total Supply: 25,000,000</h6>
                                  <h5 class="modal-title">Circulating Supply: 5,202,143</h5>
                                  <h5 class="modal-title">SYNC = $1.23</h5>
