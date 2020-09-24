@@ -96,7 +96,20 @@
             </li>
 
           </ul>
+        <div class="alert alert-danger" id="alert-error-https" style="display: none">
+              You can run this example only over HTTPS connection.
+        </div>
+        <div id="prepare">
+          <button class="btn btn-primary" id="btn-connect">
+            Connect wallet
+          </button>
+        </div>
 
+        <div id="connected" style="display: none">
+
+          <button class="btn btn-primary" id="btn-disconnect">
+            Disconnect wallet
+          </button>
           <a id="dark" class=" first-button" onclick="dark()"><i class="fas fa-adjust" style="padding-right: 20px;"></i></a>
 
         </div>
