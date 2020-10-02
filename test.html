@@ -305,6 +305,7 @@
                     <div class="container">
                       <h1 class="title" style="font-family: 'Syncopate', sans-serif !important;   font-variant-caps: small-caps;   font-weight: 800;">Cryptobonds</h1>
                       <p style="padding: 30px;    border-radius: 50px 50px 90px 90px;   font-size: 27px; -webkit-text-stroke: 1px #00000026;">High yields meets reduced risk.<!--SYNC is used create tradable locked liquidity that we call Cryptobonds. --></p>
+                      <div class="clock" id="clockFRS" style=" "></div>
                     </div>
                   </div>
                 </section>
@@ -716,7 +717,25 @@
                         <!-- div style="display: flex; justify-content: center; margin-top: -20px;">
                             <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#CONNECT_WALLET" id="btn-connect"><span>CONNECT</span></a>
                         </div-->
-                          <div class="logo rotateIn" style="width: 60%;    height: 267px;    margin: auto;"></div>
+                          <div class="lo2go fadeIn" style="width: 60%;    height: 316px;    margin: auto;">
+                            <svg viewBox="0 0 50 100" style="
+                                                              width: 100%;
+                                                              height: 316px;
+                                                              font: 5em/1 Montserrat;
+                                                              font-weight:900;
+                                                          ">
+                              <!-- Symbol-->
+                              <symbol id="s-text">
+                                <text text-anchor="middle" x="50%" y="50%" dy=".35em">§</text>
+                              </symbol>
+                              <!-- Duplicate symbols-->
+                              <use class="text" xlink:href="#s-text"></use>
+                              <use class="text" xlink:href="#s-text"></use>
+                              <use class="text" xlink:href="#s-text"></use>
+                              <use class="text" xlink:href="#s-text"></use>
+                              <use class="text" xlink:href="#s-text"></use>
+                            </svg>
+                          </div>
                           <h3 id="yourSYNC" style="padding-bottom: 15px;    text-align: center;">Your SYNC:</h3>
                           <div style="display: flex; justify-content: center; margin-top: -20px;">
                               <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#GET_SYNCED"><span>GET SYNC</span></a>
@@ -730,11 +749,11 @@
                         <div class="row ">
                             <div class="col-md-6">
                                 <h4>TODAY'S DISTRIBUTION</h4>
-                                <h1 id="syncTotal"><img src="img/CBOND LOGO CLEAN.png" height="40" style="margin: -5px 5px 0 0;"><span id="syncTotalValue">5,000,000</span></h1>
+                                <h1 id="syncTotal"><!--img src="img/CBOND LOGO CLEAN.png" height="40" style="margin: -5px 5px 0 0;"--><span id="syncTotalValue">§5,000,000</span></h1>
                                 <h4>SYNC TOKENS</h4>
                             </div>
                             <div class="col-md-6">
-                                <br><h4>9/1/2020</h4>
+                                <h4>9/1/2020</h4>
                                 <h1 id="ethRecieved">Ξ 1,234</h1>
                                 <h4>ETH Recieved</h4>
                             </div>
@@ -968,8 +987,8 @@
                     </div>
                     <div class="col-md-12">
                         <div class="py-4 d-flex justify-content-center align-items-center">
-                          <a class="mr-4" href="" style="color: white!important;">Privacy &amp; terms</a>
-                          <a href="" style="color: white!important;">Made By Cryptogenik</a>
+                          <a class="mr-4 credit" href="" style="">Privacy &amp; terms</a>
+                          <a href="" class="mr-4 credit">Made By Cryptogenik</a>
                         </div>
                     </div>
                 </div>
@@ -1032,6 +1051,20 @@
                         countdown: true,
                         showSeconds: true,
                     });
+
+                            // FRS countdown
+
+                    				// Set some date in the future. In this case, it's always Jan 1
+                    				var futureDate  = new Date(2020, 10, 1);
+
+                    				// Calculate the difference in seconds between the future and current date
+                    				var diff = futureDate.getTime() / 1000 - now.getTime() / 1000;
+
+                    				// Instantiate a coutdown FlipClock
+                    				clock = $('#clockFRS').FlipClock(diff, {
+                    					clockFace: 'DailyCounter',
+                    					countdown: true
+                    				});
 
 
                     // Transition effect for navbar
