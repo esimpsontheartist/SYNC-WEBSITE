@@ -592,14 +592,14 @@ M O D A L B O X
 .modal{
   background: linear-gradient(145deg, rgb(39, 64, 100), rgb(46, 76, 119));
 }
-.modal h2 {
-  /*    text-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px rgb(58 97 154 / 90%), 0 0 3px rgb(141 186 255), 4px 4px 6px rgb(0 0 0 / 79%), 4px 4px 7px #3560a200; */
-      /* -webkit-text-stroke: 1px #90acce85; */
-      /*text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0 0 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
-      -webkit-text-stroke: 1px #0d254240; */
+.dark-mode .modal h2 {
       color: rgb(226 230 233);
-      font-variant: small-caps;
   }
+
+  .modal h2 {
+        color: #333;
+        font-variant: small-caps;
+    }
 
 .dark-mode .modal-content{
   /* background: linear-gradient(145deg, #274064, #2e4c77);
@@ -610,16 +610,28 @@ M O D A L B O X
   color: ghostwhite;
 }
 
-.modal-content{
+.dark-mode .modal-content{
   border-radius: 40px !important;
   /* background: linear-gradient(145deg, #274064, #2e4c77);
   box-shadow:  14px 14px 27px #253d5f,
                -14px -14px 27px #31517f !important; */
-  background: linear-gradient(145deg, #e6e6e6, #ddd);
+background: linear-gradient(145deg, #203554, #2e4c77);
+  /*background: linear-gradient(145deg, #e6e6e6, #ddd);*/
   box-shadow: 14px 14px 27px #1c2e48, -14px -14px 27px #31517f ;
-  color: #333;
+  color: #ddd;
 }
 
+.modal-content{
+      border-radius: 40px !important;
+      background: linear-gradient(145deg, #e6e6e6, #ddd);
+      box-shadow: 10px 9px 34px #1d1d1d,
+      color: #333;
+}
+
+.dark-mode .modal-title {
+
+  color: rgb(226 230 233);
+}
 .modal-title {
 /*    text-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px rgb(58 97 154 / 90%), 0 0 3px rgb(141 186 255), 4px 4px 6px rgb(0 0 0 / 79%), 4px 4px 7px #3560a200;
     -webkit-text-stroke: 1px #90acce85; */
@@ -630,9 +642,23 @@ M O D A L B O X
     /* text-shadow: 3px 3px 0 #0094c700, -1px -1px 0 #799bb347, 1px -1px 0 #2174bb99, -1px 1px 0 #022746c4, 1px 1px 0 #0000005c, -2px -2px 5px rgb(58 97 154 / 90%), 0 0 3px rgb(141 186 255), 2px 2px 4px rgb(0 0 0 / 79%), 2px 2px 3px #3560a200;
     -webkit-text-stroke: 1px #0d254240; */
     font-size: 48px;
-    color: rgb(226 230 233);
 /*    font-weight: bold; */
     font-variant: small-caps;
+
+    color: #333;
+}
+
+.dark-mode .modal-header .close {
+  font-size: 40px !important;
+  color: ghostwhite !important;
+  width: 49px !important;
+  padding: 5px !important;
+  border-radius: 150px !important;
+  background: linear-gradient(145deg, #274064, #2e4c77) !important;
+  box-shadow: 11px 11px 22px #223858, -11px -11px 22px #345686 !important;
+  text-shadow: 1px 1px 1px black !important;
+  border: 1px solid #2f507d !important;
+  margin-right: 3px !important;
 }
 
 .modal-header .close {
@@ -641,8 +667,8 @@ M O D A L B O X
   width: 49px !important;
   padding: 5px !important;
   border-radius: 150px !important;
-  background: linear-gradient(145deg, #274064, #2e4c77) !important;
-  box-shadow: 11px 11px 22px #223858, -11px -11px 22px #345686 !important;
+  background: linear-gradient(145deg, #616161, #1d1d1d);
+  box-shadow: none;
   text-shadow: 1px 1px 1px black !important;
   border: 1px solid #2f507d !important;
   margin-right: 3px !important;
@@ -972,13 +998,15 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 .wideLogo {height:40px}
 footer {display:none !important}
 /* .container-fluid {padding-right: 0 !important;padding-left: 0 !important;}*/
-#frs_clock {transform: scale(.75);    margin: 0 0 0 -30px;    width: 116%;  }
+#frs_clock, #frs_clock #clock1 {    transform: scale(.69);      width: 466px;  }
+#frs_clock { margin: 0 -10px 0 -45px; }
 
 @media (min-width: 576px) {
       .title {    font-size: 63px;}
       .leftISO {padding: 13% 30px 0;}
 
-      #frs_clock {transform: scale(1);       margin: 20px 30px;    width: 100%;  }
+      #frs_clock, #frs_clock #clock1  {transform: scale(1);     }
+      #frs_clock{margin: 20px 30px;width: 100%}
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
@@ -987,7 +1015,8 @@ footer {display:none !important}
 .neumorphicbutton {transform:scale(.8);}
 .title {    font-size: 85px;}
 /* .wideLogo {height:50px} */
-#frs_clock {transform: scale(1);        margin: 20px 30px;    width: 100%;  }
+#frs_clock, #frs_clock #clock1  {transform: scale(1);     ;  }
+#frs_clock{margin: 20px 30px;width: 100%}
 }
 
 /* Large devices (desktops, 992px and up) */

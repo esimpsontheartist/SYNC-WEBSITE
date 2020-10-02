@@ -76,7 +76,7 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">Fair Release</a>
                 <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">Bond Builder</a>
-                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#bondPortfolio" aria-expanded="false" aria-controls="bondPortfolio">My Portfolio</a>
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#portfolio" aria-expanded="false" aria-controls="bondPortfolio">My Portfolio</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#stats" aria-expanded="false" aria-controls="bondBuilder">Bond Economy</a>
               </div>
@@ -241,8 +241,9 @@
                     <div class="modal-body">
                         <h2 style="margin: 5px 0 -10px 0; text-align: center;">Step 1: Send Ethereum</h2>
 
-                        <div class="bondinput" style="display: inline-block; padding-left: 8%;">
-                            <input type="text" value="" placeholder="0" required="" style="color: #3e3e3e;" />
+                        <div class="bond2input">
+                            <a class="neumorphicbutton textinput"></a>
+                            <input id="ethBuy" type="number" value="" min="0.000000000000" placeholder="0" required="" style="font-size: 16px;">
                         </div>
 
                         <img alt="arrow" src="img/arrow.webp" style="margin: -25px 0 -55px; z-index: 5; position: relative; left: 40%;" />
@@ -913,6 +914,98 @@
                ==      ======  =====  ====  =====  ======      ==
                ==================================================
                   -->
+<!--
+██████   ██████  ██████  ████████ ███████  ██████  ██      ██  ██████ 
+██   ██ ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██ 
+██████  ██    ██ ██████     ██    █████   ██    ██ ██      ██ ██    ██ 
+██      ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██ 
+██       ██████  ██   ██    ██    ██       ██████  ███████ ██  ██████  
+-->                                                                  
+<section id="portfolio" class="collapse" data-parent="#dapps">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 offset-md-1 offset-lg-3">
+          <h1 class="title">PORTFOLIO</h1>
+        </div>
+    </div>
+
+    <!-- Distro Start -->
+    <div class="row">
+        <div class="col-md-2 offset-md-1 offset-lg-2">
+          <svg viewBox="0 0 50 100" style="
+                                            width: 100%;
+                                            height: 316px;
+                                            font: 5em/1 Montserrat;
+                                            font-weight:900;
+                                        ">
+            <!-- Symbol-->
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">§</text>
+            </symbol>
+            <!-- Duplicate symbols-->
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+          </svg>
+        </div>
+        <div class="col-md-5">
+            <div class="row neumorph">
+                <div class="col-md-12">
+                    <div id="network">
+                       <p>
+                         <strong>Connected blockchain:</strong> <span id="network-name"></span>
+                       </p>
+
+                       <p>
+                         <strong>Selected account:</strong> <span id="selected-account"></span>
+                       </p>
+                   </div>
+                   <table class="table table-listing">
+                     <thead>
+                       <th>Address</th>
+                       <th>ETH balance</th>
+                     </thead>
+
+                     <tbody id="accounts">
+                     </tbody>
+                 </table>
+                 <!-- We use simple <template> templating for the example -->
+                   <div id="templates" style="display: none">
+                     <template id="template-balance">
+                       <tr>
+                         <th class="address"></th>
+                         <td class="balance"></td>
+                       </tr>
+                     </template>
+                   </div>
+
+            </div>
+
+
+
+            <div class="row neumorph">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+
+              </DIV>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+██████   ██████  ██████  ████████ ███████  ██████  ██      ██  ██████ 
+██   ██ ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██ 
+██████  ██    ██ ██████     ██    █████   ██    ██ ██      ██ ██    ██ 
+██      ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██ 
+██       ██████  ██   ██    ██    ██       ██████  ███████ ██  ██████  
+-->                                                                  
+
+
 
 
 
