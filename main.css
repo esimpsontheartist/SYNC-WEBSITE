@@ -39,6 +39,18 @@ body {
       opacity: 0.35;
 }
 
+#whatIsTheSYNC{
+  content: '';
+  color: #aa3939;
+  animation: NeoSYNC 5s infinite;
+}
+
+@keyframes NeoSYNC {
+  0% { content: 'High yields meets reduced risk.'}
+  50% { content: '2'}
+  100% { content: '3'}
+}
+
 .neumorph {
     border-radius: 40px;
     box-shadow: 3px 3px 3px #0094c700, -2px -2px 2px #799bb347, 2px -2px 2px #2174bb99, -2px 2px 2px #022746c4, 2px 2px 2px #0000005c, -3px -3px 5px rgb(58 97 154 / 90%), 0px 0px 3px rgb(141 186 255), 4px 4px 6px rgb(0 0 0 / 79%), 4px 4px 7px #3560a200;
