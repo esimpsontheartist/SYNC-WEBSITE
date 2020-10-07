@@ -40,6 +40,20 @@ body {
       opacity: 0.15;
 }
 
+#whatIsTheSYNC:after {
+  content: '';
+  color: #aa3939;
+  animation: sync 20s infinite;
+}
+
+@keyframes sync {
+  0% { content: 'High yield meet reduced risk'}
+  25% { content: 'Powered by SYNC'}
+  50% { content: 'Next Generation DeFi NFT'}
+  75% { content: 'Tradable Locked Liquidity'}
+  100% { content: 'High yield meet reduced risk'}
+}
+
 .neumorph {
     border-radius: 40px;
     padding: 20px;
