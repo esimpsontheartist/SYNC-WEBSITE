@@ -7,17 +7,17 @@
         <!-- link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'-->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet" />
         <link href="//fonts.googleapis.com/css?family=Syncopate&subset=latin" rel="stylesheet" type="text/css">
+        <link rel="manifest" href="manifest.json?v=.02">
 
-        <link href="nav.css" rel="stylesheet" /><link href="main.css?v=.013" rel="stylesheet" />
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
         <!-- link href="https://maxcdn.bootstrapcdn.com/font-awesome/5.14.0/css/font-awesome.min.css" rel="stylesheet"-->
         <script src="https://kit.fontawesome.com/641e1aaba6.js" crossorigin="anonymous"></script>
 
         <!-- Latest compiled and minified CSS -->
         <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" /-->
-        <link rel="stylesheet" href="flipclock.css" />
+        <link rel="stylesheet" href="flipclock.css" /><link href="css/nav2.css?v=.2" rel="stylesheet" /><link href="css/main.css?v=.035" rel="stylesheet" />
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -25,19 +25,19 @@
         <!-- Latest compiled JavaScript -->
         <!-- Google / Search Engine Tags-->
         <meta itemprop="name" content="SYNCBOND.COM">
-        <meta itemprop="description" content="SYNCBOND.COM: The first Crypto Bond Market providing True Tradable Locked Liquidity!">
-        <meta itemprop="image" content="https://www.syncbond.com/img/banner.jpg?2020-11-17">
+        <meta itemprop="description" content="SYNCBOND.COM: The first high interest blockchain certificate of deposit.">
+        <meta itemprop="image" content="img/banner.jpg?2020-08-08">
         <!-- Facebook Meta Tags-->
         <meta property="og:url" content="https://SYNCBOND.COM">
         <meta property="og:type" content="website">
         <meta property="og:title" content="SYNCBOND.COM">
-        <meta property="og:description" content="SYNCBOND.COM: The first Crypto Bond Market providing True Tradable Locked Liquidity!">
-        <meta property="og:image" content="https://www.syncbond.com/img/banner.jpg?2020-11-17">
+        <meta property="og:description" content="SYNCBOND.COM: The first high interest blockchain certificate of deposit.">
+        <meta property="og:image" content="img/banner.jpg?2020-08-08">
         <!-- Twitter Meta Tags-->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="SYNCBOND.COM">
-        <meta name="twitter:description" content="SYNCBOND.COM: The first Crypto Bond Market providing True Tradable Locked Liquidity!">
-        <meta name="twitter:image" content="https://www.syncbond.com/img/banner.jpg?2020-11-17">
+        <meta name="twitter:description" content="SYNCBOND.COM: The first high interest blockchain certificate of deposit.">
+        <meta name="twitter:image" content="img/banner.jpg?2020-08-08">
 
 
         <title>SYNC NETWORK</title>
@@ -61,31 +61,60 @@
         =  =====  ==        ==  =======  ===      ==
         ============================================
       -->
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light text-light">
+      <nav class="navbar fixed-top navbar-expand-lg">
         <a class="navbar-brand text-light" href="#" data-toggle="collapse" data-target="#home" aria-expanded="false" aria-controls="bondBuilder"><img src="img/widelogo.png" class="wideLogo"></a>
-        <button class="logo neumorph navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:60px;">
-              <div class="anqimated-icon1"><span></span><span></span><span></span></div>
+        <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:60px;">
+              <i class="fas fa-bars" style="color:white"></i>
             </button>
 
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav mr-auto text-light">
-            <!-- a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">FRS</a>
-            <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">BUILDER</a>
-            <a class="nav-item nav-link" href="#">MARKET</a>
-            <a class="nav-item nav-link" href="#" data-toggle="collapse" data-target="#stats" aria-expanded="false" aria-controls="bondBuilder">DASHBOARD</a -->
+            <li class="nav-item dropdown" style="background: none;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Products
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">Fair Release</a>
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#bondBuilder" aria-expanded="false" aria-controls="bondBuilder">Bond Builder</a>
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#portfolio" aria-expanded="false" aria-controls="bondPortfolio">My Portfolio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#stats" aria-expanded="false" aria-controls="bondBuilder">Bond Economy</a>
+              </div>
+            </li>
+            <a class="nav-item nav-link" href="#">Bond Market</a>
+            <li class="nav-item dropdown" style="background: none;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#frs" aria-expanded="false" aria-controls="bondBuilder">Fair Release</a>
+                <a class="dropdown-item" href="https://sync-network.gitbook.io/" target="_blank" >FAQ</a>
+                <a class="dropdown-item" href="https://sync-network.gitbook.io/sync-network/introduction" target="_blank" >Guide</a>
+                <a class="dropdown-item" href="https://etherscan.io/address/0xb6ff96b8a8d214544ca0dbc9b33f7ad6503efd32" target="_blank" >SYNC Contract</a>
+                <a class="dropdown-item" href="https://uniswap.info/token/0xb6ff96b8a8d214544ca0dbc9b33f7ad6503efd32" target="_blank" >UNISWAP</a>
+                <a class="dropdown-item" href="litepaper.pdf" target="_blank" >Lite-Whitepaper</a>
+                <a class="dropdown-item" href="https://forms.gle/iZDNn3qSoHwTYvSw7" target="_blank" >Partnership Request</a>
+              </div>
+            </li>
+
           </ul>
-              <div class="dropdown" style="margin: 10px;">
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background: linear-gradient(145deg, #273448, #385c90);    border: 1px solid #2e4b76;      box-shadow: 3px 3px 5px #00000094  /* box-shadow: 4px 4px 7px #121e30, -3px -3px 7px #2e4c78;*/">
-                    More Information
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://sync-network.gitbook.io/" target="_blank" >FAQ</a>
-                    <a class="dropdown-item" href="https://sync-network.gitbook.io/sync-network/introduction" target="_blank" >Guide</a>
-                    <a class="dropdown-item" href="https://etherscan.io/address/0xb6ff96b8a8d214544ca0dbc9b33f7ad6503efd32" target="_blank" >SYNC Contract</a>
-                    <a class="dropdown-item" href="https://uniswap.info/token/0xb6ff96b8a8d214544ca0dbc9b33f7ad6503efd32" target="_blank" >UNISWAP</a>
-                    <a class="dropdown-item" href="litepaper.pdf" target="_blank" >Lite-Whitepaper</a>
-                  </div>
-                </div>
+          <a id="dark" class=" first-button" onclick="dark()"><i class="fas fa-adjust" style="padding-right: 20px;"></i></a>
+        <div class="alert alert-danger" id="alert-error-https" style="display: none">
+              Crypto wallets only work on HTTPS connection.
+        </div>
+        <div id="prepare" style="margin-right: 10px;">
+          <button class="btn btn-primary" id="btn-connect">
+            Connect wallet
+          </button>
+        </div>
+
+        <div id="connected" style="margin-right: 10px;display: none">
+
+          <button class="btn btn-primary" id="btn-disconnect">
+            Disconnect wallet
+          </button>
+
+
         </div>
       </nav>
       <!--
@@ -212,8 +241,9 @@
                     <div class="modal-body">
                         <h2 style="margin: 5px 0 -10px 0; text-align: center;">Step 1: Send Ethereum</h2>
 
-                        <div class="bondinput" style="display: inline-block; padding-left: 8%;">
-                            <input type="text" value="" placeholder="0" required="" style="color: darkgrey;" />
+                        <div class="bond2input">
+                            <a class="neumorphicbutton textinput"></a>
+                            <input id="ethBuy" type="number" value="" min="0.000000000000" placeholder="0" required="" style="font-size: 16px;">
                         </div>
 
                         <img alt="arrow" src="img/arrow.webp" style="margin: -25px 0 -55px; z-index: 5; position: relative; left: 40%;" />
@@ -252,7 +282,7 @@
           =============================================================
           -->
 
-        <div class="container-fluid white-text" id="dapps">
+        <div class="container-fluid white-text" id="dapps" style="min-height: 100vh;">
             <!-- BEGIN DOCUMENT -->
 
             <!--
@@ -272,12 +302,16 @@
 
                 <section id="home" class="collapse show" data-parent="#dapps">
 
-                  <div class="jumbotron jumbotron-fluid">
+                  <div class="jumbotron jumbotron-fluid" style="position: fixed;    top: 0;    right: 0;    bottom: 0;    left: 0;">
                     <div class="container">
-                      <h1 class="title" style="font-family: 'Syncopate', sans-serif !important; color: #f0f0f0; font-variant-caps: small-caps;   font-weight: 800;">Synchronized Cryptobonds</h1>
-                      <p style="background-image: linear-gradient(0deg, transparent, #2b5177 30%, #6175a5 60%,transparent);    padding: 30px;    border-radius: 50px 50px 90px 90px;   font-size: 27px;    -webkit-text-stroke: 1px #00000026;">SYNC is used to create tradable locked liquidity that we call Cryptobonds.</p>
+                      <h1 class="title" style="font-family: 'Syncopate', sans-serif !important;   font-variant-caps: small-caps;   font-weight: 800;">Cryptobonds</h1>
+                      <p id="whatIsTheSYNC" style="padding: 30px;    border-radius: 50px 50px 90px 90px;   font-size: 27px; -webkit-text-stroke: 1px #00000026;"></p>
+                      <div class="clock" id="clockFRS" style=" "></div>
                     </div>
                   </div>
+                </section>
+
+                  <section id="about" class="collapse" data-parent="#dapps">
 
                   <div class="container my-5 py-5 z-depth-1">
 
@@ -297,7 +331,7 @@
                           </div>
 
                           <p style="text-align: justify;"> Projects in the decentralized finance space started utilizing stake and proof-of-liquidity mechanics to develop a trustless economy but fundamental flaws have held these projects behind. The SYNC Network addresses these problems and offers a workable solution through tradeable stakes bonding Uniswap liquidity pairs with a fully trustless ERC-20 token (SYNC). </p>
-                          <p style="text-align: justify;">SYNC enables users to earn interest by staking a cryptographic bond to Uniswap liquidity pair tokens (CryptoBonds). CryptoBonds are an ERC-721 token with collectible attributes, accruing interest rates, and the ability to trade and speculate on them within a secondary market.</p>
+                          <p style="text-align: justify;">SYNC enables users to earn interest by staking a cyptographic bond to Uniswap liquidity pair tokens (CBonds). CBonds are an ERC-721 token with collectible attributes, accruing interest rates, and the ability to trade and speculate on them within a secondary market.</p>
                           <p style="text-align: justify;">SYNC Network works to bring stability and risk mitigation to decentralized finance by solidifying a guarantee on holding liquidity pairs for an extended period of time. The Sync Network can help build a needed, stable foundation for the DeFi space and a fully functioning, more robust trustless economy.</p>
 
                         </div>
@@ -317,7 +351,7 @@
                         <div class="col-lg-6">
                             <div class="section-title">
                                 <h2 class="text-left">Ease of Use</h2>
-                                <p>We do all the heavy lifting and validation in the contract to ensure that building Crypto Bonds is simple, intuitive and sound. </p>
+                                <p>We do all the heavy lifting and validation in the contract to ensure that building Cryptobonds is simple, intuitive and sound. </p>
                             </div>
                         </div>
                     </div>
@@ -329,13 +363,13 @@
 
                           <div class="col-lg-6">
                             <h4 class="text-left">Step 1: Liquidity Pair From Uniswap</h4>
-                            <p style="padding:15px 0;">Add equal parts of your favorite token with ETH and earn on every trade on Uniswap even while bonded. That's the power of Crypto Bonds.</p>
+                            <p style="padding:15px 0;">Add equal parts of your favorite token with ETH and earn on every trade on Uniswap even while bonded. That's the power of Cryptobonds.</p>
                             <hr style="">
                             <h4 class="text-left">Step 2: Get SYNC Token From Uniswap</h4>
                             <p style="padding:15px 0;">While you're there, pick up some SYNC tokens from Uniswap or our time limited offer from the Fair Release Schedule.</p>
                             <hr style="">
-                            <h4 class="text-left">Step 3: Put them together in the Crypto Bond Builder</h4>
-                            <p style="padding:15px 0;">Combine them together to create a Crypto Bond Set parameters such as time and if you want quarterly dividends to make it uniquely yours.</p>
+                            <h4 class="text-left">Step 3: Put them together in the Cryptobond Builder</h4>
+                            <p style="padding:15px 0;">Combine them together to create a Cryptobond Set parameters such as time and if you want quarterly divs to make it uniquily yours.</p>
                             <hr style="">
                           </div>
 
@@ -344,13 +378,13 @@
                         </div>
                   </div>
                     <!-- Distro Start -->
- <section class="section services-section" id="services">
+ <section class="section services-section" id="services1">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-title">
                     <h2 class="text-left">Tokenomics</h2>
-                    <p>A two token system consisting of SYNC token and Crypto Bonds working together for risk distribution across uniswap liquidity pairs. </p>
+                    <p>A two token system consisting of SYNC token and Cryptobonds working together for risk distribution across uniswap liquidity pairs. </p>
                 </div>
             </div>
         </div>
@@ -363,7 +397,7 @@
                         <i class="fas fa-desktop"></i>
                     </div>
                     <div class="feature-content">
-                        <p>Better together - SYNC is required to create Crypto Bonds. This combination has interesting and emergent properties.</p>
+                        <p>Better together - SYNC is required to create Cryptobonds. This combination has interesting and emergent properties.</p>
                     </div>
                 </div>
             </div>
@@ -371,7 +405,7 @@
             <!-- feaure box -->
             <div class="col-sm-6 col-lg-4">
                 <div class="feature-box-1 neumorph">
-                  <h5 style="float: right;text-align: right;">EQUAL<br>OPPORTUNITY</h5>
+                  <h5 style="float: right;text-align: right;">EQUAL<br>OPPERTUNITY</h5>
                     <div class="icon">
                         <i class="fa fa-user"></i>
                     </div>
@@ -397,12 +431,12 @@
             <!-- feaure box -->
             <div class="col-sm-6 col-lg-4">
                 <div class="feature-box-1 neumorph">
-                  <h5 style="float: right;text-align: right;">Lucky<br>Crypto Bonds</h5>
+                  <h5 style="float: right;text-align: right;">Lucky<br>Cryptobonds</h5>
                     <div class="icon">
                         🍀
                     </div>
                     <div class="feature-content">
-                        <p>Occasionally creating a Crypto Bond results in a "Lucky Crypto Bond" and gets a Lucky bonus interest rate.</p>
+                        <p>Occasionally creating a Cryptobond results in a "Lucky Cryptobond" and gets a Lucky bonus interest rate.</p>
                     </div>
                 </div>
             </div>
@@ -415,7 +449,7 @@
                         <i class="fa fa-th"></i>
                     </div>
                     <div class="feature-content">
-                        <p>Crypto Bonds require both SYNC tokens & Uniswap Liquidity Pairs, reducing the risk to Crypto Bond holders by diversifying their assets.</p>
+                        <p>Cryptobonds require both SYNC tokens & Uniswap Liquidity Pairs, reducing the risk to Cryptobond holders by diversifying their assets.</p>
                     </div>
                 </div>
             </div>
@@ -428,7 +462,7 @@
                         <i class="fa fa-cog"></i>
                     </div>
                     <div class="feature-content">
-                        <p>Crypto Bonds are highly configurable for your needs. For example longer terms pays better rates.</p>
+                        <p>Cryptobonds are highly configurable for your needs. For example longer terms pays better rates.</p>
                     </div>
                 </div>
             </div>
@@ -443,7 +477,7 @@
 <div class="col-lg-12">
 <div class="section-title">
 <h2 class="text-left">Dual Smart Contracts</h2>
-<p>Two contracts: SYNC token and Crypto Bonds together to create the SYNC Network. </p>
+<p>Two contracts: SYNC token and Cryptobonds together to create the SYNC Network. </p>
 </div>
 </div>
 </div>
@@ -457,7 +491,7 @@
 <div class="feature-content">
     <h5>SYNC TOKEN</h5>
     <p><a href="https://etherscan.io/address/0xB6ff96B8A8d214544Ca0dBc9B33f7AD6503eFD32" target="_blank" style="color: white;    font-size: 15.5px;">ADDRESS: 0xB6ff96B8A8d214544Ca0dBc9B33f7AD6503eFD32</a></p>
-    <p>This contract is responsible for the SYNC token and it's associated minting and burning functions.</p>
+    <p>This contract is responsible for the SYNC token and it's assosiated minting and burning functions.</p>
 </div>
 </div>
 </div>
@@ -469,9 +503,9 @@
     <i class="fas fa-file-contract"></i>
 </div>
 <div class="feature-content">
-    <h5>Crypto Bond</h5>
+    <h5>Cryptobond</h5>
     <p>ADDRESS: UNPUBLISHED</p>
-    <p>The Crypto Bond contract communicates to the SYNC token contract to mint and burn SYNC tokens. The Crypto Bond contract holds the liquidity tokens until the Crypto Bond matures. At maturity you can cash out a Crypto Bond to obtain the orginal liquidity tokens, and SYNC tokens with interest.</p>
+    <p>The Cryptobond contract communicates to the SYNC token contract to mint and burn SYN tokens. The Cryptobond contract holds the liquidity tokens until the Cryptobond matures. At maturity you can cash out a Cryptobond to obtain the orginal liquidity tokens, and SYNC tokens with interest.</p>
 </div>
 </div>
 </div>
@@ -516,7 +550,7 @@
                                       <span class="flag">NFT Token Launch</span>
                                       <span class="time-wrapper"><span class="time">After Audit</span></span>
                                     </div>
-                                    <div class="desc">The Crypto Bond NFT will offically go live allowing the creation of the worlds first Cryptobond!</div>
+                                    <div class="desc">The Cryptobond NFT will offically go live allowing the creation of the worlds first Cryptobond!</div>
                                   </div>
                                 </li>
 
@@ -553,12 +587,12 @@
             =      =====      ===    ==        ==       ===        ==  ====  =
             ==================================================================
             -->
-            <section id="bondBuilder" class="collapse" data-parent="#dapps">
-                <div class="container neumorph pt-5">
+            <section id="bondBuilder" class="container collapse" data-parent="#dapps">
+                <div class=" neumorph pt-5">
               <div class="row">
                   <div class="col-md-12 col-sm-12">
-                    <!-- img alt="Crypto Bond Builder" src="img/bondbuilder.webp" style="padding-top: 50px; margin: auto; display: block;" /-->
-                    <h1 class="title">Crypto Bond Builder</h1>
+                    <!-- img alt="Cryptobond Builder" src="img/bondbuilder.webp" style="padding-top: 50px; margin: auto; display: block;" /-->
+                    <h1 class="title">Cryptobond Builder</h1>
                   </div>
               </div>
 
@@ -567,14 +601,14 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-0 col-sm-12"></div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <h1 style="font-size: 40px;">Select Asset Pair</h1>
+                        <h1 style="font-size: 40px;">Select LP Token</h1>
                         <div class="bond2input">
                             <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#pairChooser"></a>
                             <input class="noclick" id="pair" type="text" value="" placeholder="NONE" required="" />
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12" style="text-align: center;">
-                        <h1 style="font-size: 40px;">Asset Amount</h1>
+                        <h1 style="font-size: 40px;">LPT Amount</h1>
 
                         <div class="bond2input">
                             <a class="neumorphicbutton textinput"></a>
@@ -613,7 +647,9 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-0 col-sm-12"></div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <h1 style="font-size: 40px;">Dividens</h1>
+                        <h1 style="font-size: 40px;">Dividend
+
+                          s</h1>
                         <div class="bond2input">
                             <a class="neumorphicbutton dropdown" href="#" data-toggle="modal" data-target="#divChooser"></a>
                             <input class="noclick" id="divSchedule" type="text" value="" placeholder="NONE" required="" />
@@ -670,83 +706,99 @@
             ==============================
             -->
 
-            <section id="frs" class="collapse" data-parent="#dapps">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 offset-md-1 offset-lg-3">
-                        <h1 class="title">Fair Release Schedule</h1>
-                        <!--img alt="Crypto bonds" src="img/title3-cbonds.webp?v2" style="width: 100%;" / -->
-                    </div>
-                </div>
+            <section id="frs" class="container collapse" data-parent="#dapps">
 
-                <!-- Distro Start -->
-                <div class="row">
-                    <div class="col-md-2 neumorph offset-md-1 offset-lg-3">
-                      <div style="display: flex; justify-content: center; margin-top: -20px;">
-                          <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#CONNECT_WALLET"><span>CONNECT</span></a>
-                      </div>
-                        <div class="logo rotateIn" style="width: 100%; height: 300px; margin-top: 60px;"></div>
-                        <h3 id="yourSYNC" style="padding-bottom: 15px;    text-align: center;">Your SYNC:</h3>
-                        <div style="display: flex; justify-content: center; margin-top: -20px;">
-                            <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#GET_SYNCED"><span>GET SYNC</span></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4" style="padding-left: 42px;">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h3>SYNC Fair Release Schedule</h3>
-                            </div>
-                            <div class="col-md-3">
-                                <h3 id="currentPeriod">DAY 275</h3>
-                            </div>
-                        </div>
-
+              	<div class="row">
+              		<div class="col-md-12">
+                      <h1 class="text-center">Fair Release Schedule</h1>
+              		</div>
+              	</div>
+              	<div class="row">
+              		<div class="col-md-4">
+              			<div class="row">
+              				<div class="col-md-11 neumorph">
+                        <!-- div style="display: flex; justify-content: center; margin-top: -20px;">
+                            <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#CONNECT_WALLET" id="btn-connect"><span>CONNECT</span></a>
+                        </div-->
+                          <div class="lo2go fadeIn" style="width: 60%;    height: 316px;    margin: auto;">
+                            <svg viewBox="0 0 50 100" style="
+                                                              width: 100%;
+                                                              height: 316px;
+                                                              font: 5em/1 Montserrat;
+                                                              font-weight:900;
+                                                          ">
+                              <!-- Symbol-->
+                              <symbol id="s-text">
+                                <text text-anchor="middle" x="50%" y="50%" dy=".35em">§</text>
+                              </symbol>
+                              <!-- Duplicate symbols-->
+                              <use class="text" xlink:href="#s-text"></use>
+                              <use class="text" xlink:href="#s-text"></use>
+                              <use class="text" xlink:href="#s-text"></use>
+                              <use class="text" xlink:href="#s-text"></use>
+                              <use class="text" xlink:href="#s-text"></use>
+                            </svg>
+                          </div>
+                          <h3 id="yourSYNC" style="padding-bottom: 15px;    text-align: center;">Your SYNC:</h3>
+                          <div style="display: flex; justify-content: center; margin-top: -20px;">
+                              <a class="neumorphicbutton" href="#" data-toggle="modal" data-target="#GET_SYNCED"><span>GET SYNC</span></a>
+                          </div>
+              				</div>
+              			</div>
+              		</div>
+              		<div class="col-md-8">
+              			<div class="row">
+              				<div class="col-md-12 neumorph">
                         <div class="row ">
-                            <div class="col-md-12">
-                                <div class="progress"><div class="progress-bar" style="width: 70%;">&nbsp;</div></div>
-                              </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 neumorph">
-                                <div class="row ">
-                                    <div class="col-md-6">
-                                        <h4>TODAY'S DISTRIBUTION</h4>
-                                        <h1 id="syncTotal">♻5,000,000</h1>
-                                        <h4>SYNC TOKENS</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h4>9/1/2020</h4>
-                                        <h1 id="ethRecieved">Ξ 1,234</h1>
-                                        <h4>ETH Recieved</h4>
-                                    </div>
-                                </div>
+                            <div class="col-md-6">
+                                <h4>TODAY'S DISTRIBUTION</h4>
+                                <h1 id="syncTotal"><!--img src="img/CBOND LOGO CLEAN.png" height="40" style="margin: -5px 5px 0 0;"--><span id="syncTotalValue">§5,000,000</span></h1>
+                                <h4>SYNC TOKENS</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>9/1/2020</h4>
+                                <h1 id="ethRecieved">Ξ 1,234</h1>
+                                <h4>ETH Recieved</h4>
                             </div>
                         </div>
-                        <div class="row" style="    padding-top: 27px;">
-                          <div class="col-md-12 neumorph" style="background-image: linear-gradient(18deg, rgb(243 226 199 / 69%) 0%, rgb(193 158 103 / 72%) 50%, rgb(182 141 76 / 70%) 51%, rgb(233 212 179 / 72%) 100%);">
+              				</div>
+              			</div>
+                			<div class="row">
+
+                          <div id="frs_clock" class="col-md-12 neumorph" style="background-image: linear-gradient(18deg, rgb(243 226 199 / 69%) 0%, rgb(193 158 103 / 72%) 50%, rgb(182 141 76 / 70%) 51%, rgb(233 212 179 / 72%) 100%);">
                             <h4 style="margin: 25px auto;">CURRENT DISTRIBUTION ENDS IN</h4>
                             <div style="margin: auto;"><div class="clock" id="clock1"></div></div>
                             <h5 style="font-size: 15px;text-align: center;">*Depending on the Ethereum network traffic, figures may be delayed.</h5>
                           </DIV>
-                        </div>
-                    </div>
-                </div>
+
+                			</div>
+              		</div>
+              	</div>
+
+<hr>
+
 
                 <div class="row" style="padding-top:60px;">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <h3>EQUAL OPPORTUNITY</h3>
                         <p>SYNC Tokens have no pre-determined price; rather price is set by market demand. This reduces unfair advantages to large purchasers.</p>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <h3>BROAD DISTRIBUTION</h3>
                         <p>A 1 year distribution is to ensure everyone gets a chance to on board without diluting the early investors</p>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <h3>TRUSTLESS</h3>
                         <p>Fully powered by an unstoppable, immutable Ethereum Smart Contract.</p>
                     </div>
-                    <div class="col-md-3"></div>
+                </div>
+
+<hr>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                      <h2>(5,000,000 SYNC / Total ETH Sent By Everyone) X ETH You Committed = Your SYNC</h2>
+                    </div>
                 </div>
 
             </section>
@@ -794,6 +846,34 @@
                        <div class="col-md-5">
                            <div class="row neumorph">
                                <div class="col-md-12">
+                                   <div id="network">
+                                      <p>
+                                        <strong>Connected blockchain:</strong> <span id="network-name"></span>
+                                      </p>
+
+                                      <p>
+                                        <strong>Selected account:</strong> <span id="selected-account"></span>
+                                      </p>
+                                  </div>
+                                  <table class="table table-listing">
+                                    <thead>
+                                      <th>Address</th>
+                                      <th>ETH balance</th>
+                                    </thead>
+
+                                    <tbody id="accounts">
+                                    </tbody>
+                                </table>
+                                <!-- We use simple <template> templating for the example -->
+                                  <div id="templates" style="display: none">
+                                    <template id="template-balance">
+                                      <tr>
+                                        <th class="address"></th>
+                                        <td class="balance"></td>
+                                      </tr>
+                                    </template>
+                                  </div>
+
                                  <h6 class="modal-title">Total Supply: 25,000,000</h6>
                                  <h5 class="modal-title">Circulating Supply: 5,202,143</h5>
                                  <h5 class="modal-title">SYNC = $1.23</h5>
@@ -836,15 +916,175 @@
                ==      ======  =====  ====  =====  ======      ==
                ==================================================
                   -->
+<!--
+██████   ██████  ██████  ████████ ███████  ██████  ██      ██  ██████ 
+██   ██ ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██ 
+██████  ██    ██ ██████     ██    █████   ██    ██ ██      ██ ██    ██ 
+██      ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██ 
+██       ██████  ██   ██    ██    ██       ██████  ███████ ██  ██████  
+-->                                                                  
+<section id="portfolio" class="collapse" data-parent="#dapps">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 offset-md-1 offset-lg-3">
+          <h1 class="title">PORTFOLIO</h1>
+        </div>
+    </div>
+
+    <!-- Distro Start -->
+    <div class="row">
+        <div class="col-md-2 offset-md-1 offset-lg-2">
+          <svg viewBox="0 0 50 100" style="
+                                            width: 100%;
+                                            height: 316px;
+                                            font: 5em/1 Montserrat;
+                                            font-weight:900;
+                                        ">
+            <!-- Symbol-->
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">§</text>
+            </symbol>
+            <!-- Duplicate symbols-->
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+          </svg>
+        </div>
+        <div class="col-md-5">
+            <div class="row neumorph">
+                <div class="col-md-12">
+                    <div id="network">
+                       <p>
+                         <strong>Connected blockchain:</strong> <span id="network-name"></span>
+                       </p>
+
+                       <p>
+                         <strong>Selected account:</strong> <span id="selected-account"></span>
+                       </p>
+                   </div>
+                   <table class="table table-listing">
+                     <thead>
+                       <th>Address</th>
+                       <th>ETH balance</th>
+                     </thead>
+
+                     <tbody id="accounts">
+                     </tbody>
+                 </table>
+                 <!-- We use simple <template> templating for the example -->
+                   <div id="templates" style="display: none">
+                     <template id="template-balance">
+                       <tr>
+                         <th class="address"></th>
+                         <td class="balance"></td>
+                       </tr>
+                     </template>
+                   </div>
+
+            </div>
+
+
+            <div class="container">
+
+              <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Portfolio</h1>
+
+              <hr class="col-12">
+
+              <div class="row text-center text-lg-left">
+
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EMSDtjVHdQ8/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/8mUEy0ABdNE/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aJeH0KcFkuc/400x300" alt="">
+                      </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300" alt="">
+                      </a>
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col-md-12">
+
+              </DIV>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+██████   ██████  ██████  ████████ ███████  ██████  ██      ██  ██████ 
+██   ██ ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██ 
+██████  ██    ██ ██████     ██    █████   ██    ██ ██      ██ ██    ██ 
+██      ██    ██ ██   ██    ██    ██      ██    ██ ██      ██ ██    ██ 
+██       ██████  ██   ██    ██    ██       ██████  ███████ ██  ██████  
+-->                                                                  
 
 
 
-        <hr />
+
+
+
 
         <!--  /div><!--lost div? -->
 </div>        <!-- Container Fluid -->
         <!-- END DOCUMENT -->
-        <footer style="padding-top: 60px;">
+        <footer class="collapse show" style="padding-top: 60px;">
+
+<hr>
             <div class="container pt-5">
                 <div class="row">
                     <div class="col-md-3 col-sm-12 mb-3 text-center">
@@ -854,7 +1094,7 @@
                         <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
                             <h5 class="mb-4 font-weight-bold text-uppercase">Links</h5>
                             <ul class="list-group">
-                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xB6ff96B8A8d214544Ca0dBc9B33f7AD6503eFD32">Trade on Uniswap</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xB6ff96B8A8d214544Ca0dBc9B33f7AD6503eFD32">Uniswap</a></li>
                                 <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="https://etherscan.io/address/0xB6ff96B8A8d214544Ca0dBc9B33f7AD6503eFD32">Etherscan Contract</a></li>
                                 <!--li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="">MetaMask</a></li-->
                                 <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="#">Opensea</a></li>
@@ -866,8 +1106,8 @@
                         <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
                             <h5 class="mb-4 font-weight-bold text-uppercase">Developers</h5>
                             <ul class="list-group">
-                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://github.com/">Open Source</a></li>
-                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="https://github.com/">Technology</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="https://github.com/">Open Source</a></li>
+                                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a target="_blank" href="">Technology</a></li>
                             </ul>
                         </div>
 
@@ -895,28 +1135,27 @@
                                     <a href="https://github.com/C-O-F-E" target="_blank">Github</a>
                                 </li-->
                                 <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                                    <a target="_blank" href="https://medium.com" target="_blank">Medium</a>
+                                    <a target="_blank" href="https://medium.com">Medium</a>
                                 </li>
                                 <!--li class="list-group-item bg-transparent border-0 p-0 mb-2">
                                     <a href="https://www.facebook.com/lol-yeah-right/" target="_blank">Facebook</a>
                                 </li-->
                                 <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                                    <a target="_blank" href="https://www.youtube.com/channel/" target="_blank">YouTube</a>
+                                    <a target="_blank" href="https://www.youtube.com/channel/">YouTube</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="py-4 d-flex justify-content-center align-items-center white-text">
-                          <a class="mr-4" href="" style="color: white!important;">Privacy &amp; terms</a>
-                          <a class="mr-4" href="" style="color: white!important;">Made By Cryptogenik</a>
-                          © 2020 Copyright  &nbsp; <a class="mr-4" href="https://www.syncbond.com/"> syncbond.com</a>
+                        <div class="py-4 d-flex justify-content-center align-items-center">
+                          <a class="mr-4 credit" href="" style="">Privacy &amp; terms</a>
+                          <a href="" class="mr-4 credit">Made By Cryptogenik</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </footer>
+
 
         <script>
 
@@ -974,6 +1213,20 @@
                         showSeconds: true,
                     });
 
+                            // FRS countdown
+
+                    				// Set some date in the future. In this case, it's always Jan 1
+                    				var futureDate  = new Date(2020, 10, 1);
+
+                    				// Calculate the difference in seconds between the future and current date
+                    				var diff = futureDate.getTime() / 1000 - now.getTime() / 1000;
+
+                    				// Instantiate a coutdown FlipClock
+                    				clock = $('#clockFRS').FlipClock(diff, {
+                    					clockFace: 'DailyCounter',
+                    					countdown: true
+                    				});
+
 
                     // Transition effect for navbar
                           $(window).scroll(function() {
@@ -987,12 +1240,263 @@
 
                 });
             });
-        </script>
 
+            function dark() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+        </script>
+        <!--
+
+             Use unpkg CDN to load all NPM packages to vanilla Javascript - read more at http://unpkg.com
+
+             On your deployment, you properly either want to use a preprocessing tool like webpack
+             to include these files, or extract NPM archives and manually host the files inside.
+
+             TODO: Pin down all versions.
+
+           -->
+
+           <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+           <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+           <script type="text/javascript" src="https://unpkg.com/evm-chains/lib/index.js"></script>
+           <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+           <script type="text/javascript" src="https://unpkg.com/@toruslabs/torus-embed@1.8.5/dist/torus.umd.min.js"></script>
+           <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+           <script>
+           "use strict";
+
+/**
+ * Example JavaScript code that interacts with the page and Web3 wallets
+ */
+
+ // Unpkg imports
+const Web3Modal = window.Web3Modal.default;
+const WalletConnectProvider = window.WalletConnectProvider.default;
+const EvmChains = window.EvmChains;
+const Fortmatic = window.Fortmatic;
+
+// Web3modal instance
+let web3Modal
+
+// Chosen wallet provider given by the dialog window
+let provider;
+
+
+// Address of the selected account
+let selectedAccount;
+
+
+/**
+ * Setup the orchestra
+ */
+function init() {
+
+  console.log("Initializing example");
+  console.log("WalletConnectProvider is", WalletConnectProvider);
+  console.log("Fortmatic is", Fortmatic);
+  console.log("window.web3 is", window.web3, "window.ethereum is", window.ethereum);
+
+  // Check that the web page is run in a secure context,
+  // as otherwise MetaMask won't be available
+  if(location.protocol !== 'https:') {
+    // https://ethereum.stackexchange.com/a/62217/620
+    const alert = document.querySelector("#alert-error-https");
+    alert.style.display = "block";
+    document.querySelector("#btn-connect").setAttribute("disabled", "disabled")
+    return;
+  }
+
+  // Tell Web3modal what providers we have available.
+  // Built-in web browser provider (only one can exist as a time)
+  // like MetaMask, Brave or Opera is added automatically by Web3modal
+  const providerOptions = {
+    walletconnect: {
+      package: WalletConnectProvider,
+      options: {
+        // Mikko's test key - don't copy as your mileage may vary
+        infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+      }
+    },
+    torus: {
+   package: Torus, // required
+   options: {
+
+   }
+ },
+
+    fortmatic: {
+      package: Fortmatic,
+      options: {
+        // Mikko's TESTNET api key
+        key: "pk_test_391E26A3B43A3350"
+      }
+    }
+  };
+
+  web3Modal = new Web3Modal({
+    cacheProvider: false, // optional
+    providerOptions, // required
+    disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
+  });
+
+  console.log("Web3Modal instance is", web3Modal);
+}
+
+
+/**
+ * Kick in the UI action after Web3modal dialog has chosen a provider
+ */
+async function fetchAccountData() {
+
+  // Get a Web3 instance for the wallet
+  const web3 = new Web3(provider);
+
+  console.log("Web3 instance is", web3);
+
+  // Get connected chain id from Ethereum node
+  const chainId = await web3.eth.getChainId();
+  // Load chain information over an HTTP API
+  const chainData = await EvmChains.getChain(chainId);
+  document.querySelector("#network-name").textContent = chainData.name;
+
+  // Get list of accounts of the connected wallet
+  const accounts = await web3.eth.getAccounts();
+
+  // MetaMask does not give you all accounts, only the selected account
+  console.log("Got accounts", accounts);
+  selectedAccount = accounts[0];
+
+  document.querySelector("#selected-account").textContent = selectedAccount;
+
+  // Get a handl
+  const template = document.querySelector("#template-balance");
+  const accountContainer = document.querySelector("#accounts");
+
+  // Purge UI elements any previously loaded accounts
+  accountContainer.innerHTML = '';
+
+  // Go through all accounts and get their ETH balance
+  const rowResolvers = accounts.map(async (address) => {
+    const balance = await web3.eth.getBalance(address);
+    // ethBalance is a BigNumber instance
+    // https://github.com/indutny/bn.js/
+    const ethBalance = web3.utils.fromWei(balance, "ether");
+    const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
+    // Fill in the templated row and put in the document
+    const clone = template.content.cloneNode(true);
+    clone.querySelector(".address").textContent = address;
+    clone.querySelector(".balance").textContent = humanFriendlyBalance;
+    accountContainer.appendChild(clone);
+  });
+
+  // Because rendering account does its own RPC commucation
+  // with Ethereum node, we do not want to display any results
+  // until data for all accounts is loaded
+  await Promise.all(rowResolvers);
+
+  // Display fully loaded UI for wallet data
+  document.querySelector("#prepare").style.display = "none";
+  document.querySelector("#connected").style.display = "block";
+}
+
+
+
+/**
+ * Fetch account data for UI when
+ * - User switches accounts in wallet
+ * - User switches networks in wallet
+ * - User connects wallet initially
+ */
+async function refreshAccountData() {
+
+  // If any current data is displayed when
+  // the user is switching acounts in the wallet
+  // immediate hide this data
+  document.querySelector("#connected").style.display = "none";
+  document.querySelector("#prepare").style.display = "block";
+
+  // Disable button while UI is loading.
+  // fetchAccountData() will take a while as it communicates
+  // with Ethereum node via JSON-RPC and loads chain data
+  // over an API call.
+  document.querySelector("#btn-connect").setAttribute("disabled", "disabled")
+  await fetchAccountData(provider);
+  document.querySelector("#btn-connect").removeAttribute("disabled")
+}
+
+
+/**
+ * Connect wallet button pressed.
+ */
+async function onConnect() {
+
+  console.log("Opening a dialog", web3Modal);
+  try {
+    provider = await web3Modal.connect();
+  } catch(e) {
+    console.log("Could not get a wallet connection", e);
+    return;
+  }
+
+  // Subscribe to accounts change
+  provider.on("accountsChanged", (accounts) => {
+    fetchAccountData();
+  });
+
+  // Subscribe to chainId change
+  provider.on("chainChanged", (chainId) => {
+    fetchAccountData();
+  });
+
+  // Subscribe to networkId change
+  provider.on("networkChanged", (networkId) => {
+    fetchAccountData();
+  });
+
+  await refreshAccountData();
+}
+
+/**
+ * Disconnect wallet button pressed.
+ */
+async function onDisconnect() {
+
+  console.log("Killing the wallet connection", provider);
+
+  // TODO: Which providers have close method?
+  if(provider.close) {
+    await provider.close();
+
+    // If the cached provider is not cleared,
+    // WalletConnect will default to the existing session
+    // and does not allow to re-scan the QR code with a new wallet.
+    // Depending on your use case you may want or want not his behavir.
+    await web3Modal.clearCachedProvider();
+    provider = null;
+  }
+
+  selectedAccount = null;
+
+  // Set the UI back to the initial state
+  document.querySelector("#prepare").style.display = "block";
+  document.querySelector("#connected").style.display = "none";
+}
+
+
+/**
+ * Main entry point.
+ */
+window.addEventListener('load', async () => {
+  init();
+  document.querySelector("#btn-connect").addEventListener("click", onConnect);
+  document.querySelector("#btn-disconnect").addEventListener("click", onDisconnect);
+}); </script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="flipclock-min.js"></script>
+        <script src="global.js"></script>
 
     </body>
 </html>
